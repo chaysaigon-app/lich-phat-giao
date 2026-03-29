@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Thẻ viewport chuẩn cho mobile, tắt zoom tay để trải nghiệm như app native -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#3d2b1f" />
+    <meta name="description" content="Lịch Âm Dương Việt Nam theo truyền thống Phật Giáo Nguyên Thủy. Hiển thị ngày Thập Trai và Kinh Pháp Cú hàng ngày." />
+
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Lịch Phật" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Favicon tạm (dùng emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>" />
+
+    <title>Lịch Âm Dương · Phật Giáo Nguyên Thủy</title>
+
+    <!-- Google Fonts (có fallback offline qua Service Worker) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-wrapper">
+
+      <!-- ===== HEADER ===== -->
+      <header class="app-header">
+        <div class="header-top">
+          <div>
+            <div class="app-title">🪷 Lịch Âm Dương</div>
+            <div class="app-subtitle">Phật Giáo Nguyên Thủy · Việt Nam</div>
+          </div>
+          <div class="header-dharma">
+            Buddhaṃ<br />Saraṇaṃ Gacchāmi
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== BANNER CÀI ĐẶT PWA ===== -->
+      <div id="install-banner" class="install-banner" role="region" aria-label="Cài đặt ứng dụng">
+        <p>
+          <strong>Thêm vào màn hình chính</strong><br />
+          Sử dụng như app, xem offline mọi lúc.
+        </p>
+        <button id="btn-install" class="btn-install-action">Cài đặt</button>
+        <button id="btn-dismiss" class="btn-dismiss-install" aria-label="Đóng">✕</button>
+      </div>
+
+      <!-- ===== ĐIỀU HƯỚNG THÁNG ===== -->
+      <div class="month-nav">
+        <button id="btn-prev-month" class="nav-btn" aria-label="Tháng trước">‹</button>
+        <h2 id="month-title" class="month-title">Tháng 1 · 2025</h2>
+        <button id="btn-next-month" class="nav-btn" aria-label="Tháng sau">›</button>
+      </div>
+
+      <!-- ===== LỊCH THÁNG ===== -->
+      <section class="calendar-section" aria-label="Lịch tháng">
+        <!-- Hàng tên thứ: T2 → CN -->
+        <div class="weekday-header">
+          <div class="weekday-label">T2</div>
+          <div class="weekday-label">T3</div>
+          <div class="weekday-label">T4</div>
+          <div class="weekday-label">T5</div>
+          <div class="weekday-label">T6</div>
+          <div class="weekday-label">T7</div>
+          <div class="weekday-label">CN</div>
+        </div>
+        <!-- Lưới ngày — được render bởi app.js -->
+        <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Lịch"></div>
+      </section>
+
+      <!-- ===== NÚT VỀ HÔM NAY ===== -->
+      <div class="bottom-actions">
+        <button id="btn-today" class="btn-today">⬤ Hôm nay</button>
+      </div>
+
+      <!-- ===== CHI TIẾT NGÀY ===== -->
+      <section class="day-detail-section" aria-label="Chi tiết ngày">
+        <div class="day-detail-header">
+          <!-- Dương lịch -->
+          <div class="solar-big">
+            <div id="detail-thu" class="detail-thu">Thứ Hai</div>
+            <div id="detail-solar-day" class="detail-solar-day">1</div>
+            <div id="detail-solar-month-year" class="detail-solar-month-year">Tháng 1 · 2025</div>
+          </div>
+
+          <div class="divider-v"></div>
+
+          <!-- Âm lịch -->
+          <div class="lunar-info">
+            <div id="detail-lunar-day" class="detail-lunar-day">Ngày 1</div>
+            <div id="detail-lunar-month" class="detail-lunar-month">Tháng Giêng · Năm Ất Tỵ</div>
+          </div>
+        </div>
+
+        <!-- Badge Thập Trai (hiện/ẩn tự động) -->
+        <div class="day-detail-body">
+          <div id="thap-trai-badge" class="thap-trai-badge" role="status">
+            <span class="badge-icon">🪷</span>
+            <div>
+              <div class="badge-text">Hôm nay là ngày Thập Trai</div>
+              <div class="badge-sub">Ngày trai giới trong tháng theo truyền thống</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== KINH PHÁP CÚ ===== -->
+      <section class="phapcu-section" aria-label="Kinh Pháp Cú hàng ngày">
+        <div class="phapcu-header">
+          <span class="phapcu-icon">📿</span>
+          <div>
+            <div class="phapcu-title">Kinh Pháp Cú Hôm Nay</div>
+            <div class="phapcu-subtitle">Dhammapada · Daily Verse</div>
+          </div>
+        </div>
+        <div class="phapcu-body">
+          <!-- Tên phẩm -->
+          <div id="phapcu-pham" class="phapcu-pham">Phẩm Song Yếu — Kệ 1</div>
+
+          <!-- Kệ ngôn: font Serif -->
+          <blockquote id="phapcu-ke-ngon" class="phapcu-ke-ngon"></blockquote>
+
+          <div class="phapcu-divider"></div>
+
+          <!-- Ý nghĩa: font Sans -->
+          <div class="phapcu-y-nghia-label">Ý Nghĩa</div>
+          <p id="phapcu-y-nghia" class="phapcu-y-nghia"></p>
+        </div>
+      </section>
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="app-footer">
+        <div class="footer-dharma">"Hãy tự mình thắp đuốc mà đi."</div>
+        Lịch Âm Dương · Phật Giáo Nguyên Thủy<br />
+        Hoạt động 100% offline · PWA
+      </footer>
+
+    </div><!-- /.app-wrapper -->
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Thứ tự: data → lunar → app -->
+    <script src="data.js"></script>
+    <script src="lunar.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
