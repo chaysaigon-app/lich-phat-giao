@@ -7,7 +7,7 @@
  */
 
 // Tên cache và phiên bản. Khi cập nhật app, đổi số phiên bản để xóa cache cũ.
-const CACHE_NAME = "lich-am-duong-v1.0.0";
+const CACHE_NAME = "lich-am-duong-v1.0.1";
 
 /**
  * Danh sách tài nguyên cần cache khi cài đặt lần đầu (App Shell).
