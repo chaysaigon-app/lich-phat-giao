@@ -8,12 +8,12 @@
 // CẤU HÌNH FIREBASE — Thay bằng config của bạn sau khi tạo project
 // ============================================================
 const FIREBASE_CONFIG = {
-  apiKey: "AIzaSyBdls4S7ZkJS8yZfilJN4tuS-T1Kp2ip_c",
-  authDomain: "lichphatgiao-602e7.firebaseapp.com",
-  projectId: "lichphatgiao-602e7",
-  storageBucket: "lichphatgiao-602e7.firebasestorage.app",
-  messagingSenderId: "604347742027",
-  appId: "1:604347742027:web:6d9d66f961ce9672d69ace",
+  apiKey: "PASTE_YOUR_API_KEY_HERE",
+  authDomain: "PASTE_YOUR_AUTH_DOMAIN_HERE",
+  projectId: "PASTE_YOUR_PROJECT_ID_HERE",
+  storageBucket: "PASTE_YOUR_STORAGE_BUCKET_HERE",
+  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID_HERE",
+  appId: "PASTE_YOUR_APP_ID_HERE",
 };
 
 // ============================================================
@@ -102,19 +102,22 @@ function updateAuthUI(user) {
   const userAvatar = document.getElementById("user-avatar");
   const userName = document.getElementById("user-name");
   const eventsSection = document.getElementById("events-section");
+  const loginPrompt  = document.getElementById("login-prompt");
 
   if (user) {
-    if (btnLogin) btnLogin.style.display = "none";
-    if (btnLogout) btnLogout.style.display = "inline-flex";
-    if (userInfo) userInfo.style.display = "flex";
-    if (userAvatar) userAvatar.src = user.photoURL || "";
-    if (userName) userName.textContent = user.displayName || user.email;
+    if (btnLogin)     btnLogin.style.display     = "none";
+    if (btnLogout)    btnLogout.style.display    = "inline-flex";
+    if (userInfo)     userInfo.style.display     = "flex";
+    if (userAvatar)   userAvatar.src             = user.photoURL || "";
+    if (userName)     userName.textContent       = user.displayName || user.email;
     if (eventsSection) eventsSection.style.display = "block";
+    if (loginPrompt)  loginPrompt.style.display  = "none";
   } else {
-    if (btnLogin) btnLogin.style.display = "inline-flex";
-    if (btnLogout) btnLogout.style.display = "none";
-    if (userInfo) userInfo.style.display = "none";
+    if (btnLogin)     btnLogin.style.display     = "inline-flex";
+    if (btnLogout)    btnLogout.style.display    = "none";
+    if (userInfo)     userInfo.style.display     = "none";
     if (eventsSection) eventsSection.style.display = "none";
+    if (loginPrompt)  loginPrompt.style.display  = "flex";
   }
 }
 

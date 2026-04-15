@@ -856,6 +856,66 @@ body {
 .btn-save:disabled { opacity: .6; cursor: not-allowed; }
 
 /* ============================================================
+   BANNER GỢI Ý ĐĂNG NHẬP
+   ============================================================ */
+.login-prompt {
+  margin: 0 14px 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  background: linear-gradient(135deg, #fff8ef, #fdf3e2);
+  border: 1.5px solid #e8c88a;
+  border-radius: var(--radius-card);
+  animation: promptPulse 3s ease-in-out infinite;
+}
+
+.login-prompt-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.login-prompt-text {
+  flex: 1;
+  font-size: .8rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.login-prompt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1.5px solid #d4a94a;
+  border-radius: 8px;
+  color: #8a5e0a;
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 4px rgba(181,120,15,.18);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.login-prompt-btn:hover {
+  background: #fffbf0;
+  border-color: var(--accent-gold);
+  box-shadow: 0 2px 8px rgba(181,120,15,.28);
+}
+
+.login-prompt-btn:active { transform: scale(.95); }
+
+@keyframes promptPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,169,74,.0); border-color: #e8c88a; }
+  50%       { box-shadow: 0 0 0 4px rgba(212,169,74,.18); border-color: #d4a94a; }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .app-footer {
