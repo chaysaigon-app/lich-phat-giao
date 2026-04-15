@@ -7,7 +7,7 @@
  */
 
 // Tên cache và phiên bản. Khi cập nhật app, đổi số phiên bản để xóa cache cũ.
-const CACHE_NAME = "lich-am-duong-v1.0.1";
+const CACHE_NAME = "lich-am-duong-v1.0.2";
 
 /**
  * Danh sách tài nguyên cần cache khi cài đặt lần đầu (App Shell).
@@ -98,53 +98,40 @@ self.addEventListener("fetch", (event) => {
  * @returns {Promise<Response>}
  */
 async function handleFetch(request) {
-  const url = new URL(request.url);
+  // Chỉ xử lý các request hợp lệ (http/https)
+  if (!request.url.startsWith('http')) return;
 
-  // ---- Chiến lược 1: CACHE FIRST (cho tài nguyên tĩnh của app) ----
-  const isAppShell =
-    url.origin === self.location.origin ||
-    url.hostname === "fonts.googleapis.com" ||
-    url.hostname === "fonts.gstatic.com";
+  try {
+    // 1. NETWORK FIRST: Luôn thử tải bản mới nhất từ mạng trước
+    const networkResponse = await fetch(request);
 
-  if (isAppShell) {
-    // Thử lấy từ cache trước
+    // 2. Nếu có mạng và tải thành công, lưu ngay bản mới này vào cache
+    if (networkResponse && networkResponse.status === 200) {
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, networkResponse.clone());
+    }
+
+    return networkResponse;
+  } catch (err) {
+    // 3. CACHE FALLBACK: Nếu mất mạng (fetch thất bại), lúc này mới tìm trong Cache
+    console.warn("[SW] Mất mạng, đang tải từ cache:", request.url);
     const cachedResponse = await caches.match(request);
+    
     if (cachedResponse) {
-      // Đã có trong cache → trả về ngay (nhanh, offline được)
       return cachedResponse;
     }
 
-    // Chưa có trong cache → tải từ mạng và lưu vào cache
-    try {
-      const networkResponse = await fetch(request);
-      if (networkResponse && networkResponse.status === 200) {
-        const cache = await caches.open(CACHE_NAME);
-        // Clone response vì response chỉ đọc được 1 lần
-        cache.put(request, networkResponse.clone());
-      }
-      return networkResponse;
-    } catch (err) {
-      // Mất mạng và không có cache → trả về trang offline fallback
-      console.warn("[SW] Không thể tải:", request.url);
+    // 4. Nếu mất mạng và file cũng chưa từng được cache
+    // Nếu là request lấy trang web (HTML), trả về trang index dự phòng
+    if (request.mode === 'navigate') {
       const fallback = await caches.match("./index.html");
-      return (
-        fallback ||
-        new Response("<h1>Đang offline. Vui lòng thử lại.</h1>", {
-          headers: { "Content-Type": "text/html; charset=utf-8" },
-        })
-      );
+      if (fallback) return fallback;
     }
-  }
 
-  // ---- Chiến lược 2: NETWORK FIRST (cho tài nguyên bên ngoài khác) ----
-  try {
-    const networkResponse = await fetch(request);
-    return networkResponse;
-  } catch (err) {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) return cachedResponse;
-    // Không có gì cả
-    return new Response("Không có kết nối mạng.", { status: 503 });
+    // Trả về thông báo lỗi cơ bản
+    return new Response("<h1>Đang offline và không có dữ liệu lưu trữ. Vui lòng thử lại sau.</h1>", {
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+    });
   }
 }
 
