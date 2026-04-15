@@ -241,3 +241,36 @@ function renderAll() {
 document.addEventListener("DOMContentLoaded", () => {
   renderAll();
 });
+// ============================================================
+// [THÊM MỚI] HỆ THỐNG NHẮC NHỞ SỰ KIỆN
+// ============================================================
+function checkAndNotifyTodayEvents() {
+  // Kiểm tra trình duyệt có hỗ trợ không và đã cấp quyền chưa
+  if (!window.Notification || Notification.permission !== "granted") return;
+
+  const d = TODAY.getDate();
+  const m = TODAY.getMonth() + 1;
+  const y = TODAY.getFullYear();
+  
+  // Tạo khóa lưu trữ ngày hôm nay (để khỏi báo trùng)
+  const todayKey = `notified_event_${d}_${m}_${y}`;
+  if (localStorage.getItem(todayKey)) return; // Đã báo hôm nay rồi thì thôi
+
+  // Lấy sự kiện ngày hôm nay
+  const todayEvents = typeof getEventsForDay === 'function' ? getEventsForDay(d, m, y) : [];
+
+  if (todayEvents.length > 0) {
+    todayEvents.forEach(event => {
+      const loc = event.diaDiem ? `📍 ${event.diaDiem}` : '';
+      new Notification("🪷 Lịch Phật Giáo - Kỷ Niệm Hôm Nay", {
+        body: `Bạn có sự kiện: ${event.tenSuKien} ${loc}`,
+        icon: "icons/icon-192.png", // Icon của app
+        badge: "icons/icon-72.png",
+        vibrate: [200, 100, 200] // Rung điện thoại
+      });
+    });
+
+    // Lưu lại trạng thái đã báo
+    localStorage.setItem(todayKey, "true");
+  }
+}
