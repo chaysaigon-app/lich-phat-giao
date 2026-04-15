@@ -204,7 +204,7 @@
           <button class="modal-close" onclick="closeEventModal()">✕</button>
         </div>
 
-        <div class="modal-body">
+       <form id="event-form" class="modal-body" onsubmit="event.preventDefault();">
           <input type="hidden" id="event-id-hidden" />
 
           <!-- Tên sự kiện -->
@@ -286,7 +286,7 @@
             <label class="form-label">Ghi chú <span class="optional">(tùy chọn)</span></label>
             <textarea id="event-note" class="form-input form-textarea" placeholder="VD: Mang hoa cúc vàng, gọi điện chúc mừng..." maxlength="300" rows="3"></textarea>
           </div>
-        </div>
+        </form>
 
         <div class="modal-footer">
           <button class="btn-cancel" onclick="closeEventModal()">Hủy</button>
