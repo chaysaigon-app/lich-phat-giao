@@ -24,6 +24,24 @@ firebase.initializeApp(FIREBASE_CONFIG);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+// --- [THÊM MỚI] KHỞI TẠO THÔNG BÁO ---
+let messaging = null;
+if (firebase.messaging.isSupported()) {
+  messaging = firebase.messaging();
+}
+
+async function requestNotificationPermission() {
+  if (!messaging) return;
+  try {
+    const permission = await Notification.requestPermission();
+    if (permission === 'granted') {
+      console.log('[Notification] Đã được cấp quyền thông báo.');
+    }
+  } catch (error) {
+    console.error('[Notification] Lỗi xin quyền:', error);
+  }
+}
+// -------------------------------------
 // Bật persistence offline cho Firestore (hoạt động được khi mất mạng)
 db.enablePersistence({ synchronizeTabs: true }).catch((err) => {
   if (err.code === "failed-precondition") {
@@ -51,6 +69,9 @@ auth.onAuthStateChanged((user) => {
     // Đã đăng nhập → load sự kiện
     loadUserEvents().then(() => {
       if (typeof renderAll === "function") renderAll();
+      // [THÊM MỚI] Xin quyền và kiểm tra sự kiện hôm nay
+      if (typeof requestNotificationPermission === "function") requestNotificationPermission();
+      if (typeof checkAndNotifyTodayEvents === "function") checkAndNotifyTodayEvents();
     });
   } else {
     // Chưa đăng nhập → xóa cache sự kiện
