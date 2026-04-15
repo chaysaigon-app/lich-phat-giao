@@ -7,7 +7,7 @@
  */
 
 // Tên cache và phiên bản. Khi cập nhật app, đổi số phiên bản để xóa cache cũ.
-const CACHE_NAME = "lich-am-duong-v1.0.2";
+const CACHE_NAME = "lich-am-duong-v1.0.3";
 
 /**
  * Danh sách tài nguyên cần cache khi cài đặt lần đầu (App Shell).
@@ -143,4 +143,29 @@ self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
+});
+
+// ============================================================
+// [THÊM MỚI] LẮNG NGHE THÔNG BÁO ĐẨY TỪ MÁY CHỦ (PUSH NOTIFICATION)
+// ============================================================
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body || "Bạn có sự kiện quan trọng hôm nay.",
+      icon: 'icons/icon-192.png',
+      badge: 'icons/icon-72.png',
+      data: { url: data.url || './index.html' }
+    };
+    event.waitUntil(
+      self.registration.showNotification(data.title || "🪷 Lịch Phật Giáo", options)
+    );
+  }
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  event.waitUntil(
+    clients.openWindow(event.notification.data.url)
+  );
 });
