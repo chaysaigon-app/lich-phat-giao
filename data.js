@@ -1,120 +1,1325 @@
 /**
  * data.js
  * Dữ liệu tĩnh: Trích dẫn Kinh Pháp Cú (Dhammapada)
- * Mỗi object gồm: id, pham (tên phẩm), ke_ngon (kệ ngôn), y_nghia (ý nghĩa)
+ * 214 bài kệ — đủ xoay vòng suốt cả năm
  */
 
 const PHAP_CU = [
+  // ── PHẨM SONG YẾU (1-20) ──
   {
     id: 1,
     pham: "Phẩm Song Yếu — Kệ 1",
-    ke_ngon:
-      "Tâm dẫn đầu mọi pháp,\nTâm chủ, tâm tạo tác.\nNếu nói hay hành động\nVới tâm ý ô nhiễm,\nKhổ não sẽ theo ta,\nNhư bánh xe theo chân bò.",
-    y_nghia:
-      "Mọi hành động của thân, khẩu, ý đều bắt nguồn từ tâm. Khi tâm bị si mê, tham ái dẫn dắt, hậu quả khổ đau sẽ theo ta không rời — như bánh xe lăn theo dấu chân bò mãi không dứt.",
+    ke_ngon: "Tâm dẫn đầu mọi pháp,\nTâm chủ, tâm tạo tác.\nNếu nói hay hành động\nVới tâm ý ô nhiễm,\nKhổ não sẽ theo ta,\nNhư bánh xe theo chân bò.",
+    y_nghia: "Mọi hành động của thân, khẩu, ý đều bắt nguồn từ tâm. Khi tâm bị si mê, tham ái dẫn dắt, hậu quả khổ đau sẽ theo ta không rời — như bánh xe lăn theo dấu chân bò mãi không dứt.",
   },
   {
     id: 2,
     pham: "Phẩm Song Yếu — Kệ 2",
-    ke_ngon:
-      "Tâm dẫn đầu mọi pháp,\nTâm chủ, tâm tạo tác.\nNếu nói hay hành động\nVới tâm ý thanh tịnh,\nAn lạc sẽ theo ta,\nNhư bóng chẳng rời hình.",
-    y_nghia:
-      "Ngược lại, khi tâm trong sáng, không nhiễm ô, mỗi lời nói và hành động đều gieo hạt giống an vui. Hạnh phúc sẽ bám theo ta như bóng không rời hình — tự nhiên và bền vững.",
+    ke_ngon: "Tâm dẫn đầu mọi pháp,\nTâm chủ, tâm tạo tác.\nNếu nói hay hành động\nVới tâm ý thanh tịnh,\nAn lạc sẽ theo ta,\nNhư bóng chẳng rời hình.",
+    y_nghia: "Khi tâm trong sáng, không nhiễm ô, mỗi lời nói và hành động đều gieo hạt giống an vui. Hạnh phúc sẽ bám theo ta như bóng không rời hình — tự nhiên và bền vững.",
   },
   {
     id: 3,
-    pham: "Phẩm Tâm — Kệ 33",
-    ke_ngon:
-      "Tâm dao động, bất định,\nKhó hộ trì, khó điều phục.\nBậc trí uốn nắn tâm,\nNhư thợ làm thẳng tên.",
-    y_nghia:
-      "Tâm ta vốn bất định, phóng túng như con ngựa hoang. Nhưng người trí biết rằng tu tập là công việc của cả đời — kiên nhẫn uốn nắn tâm như người thợ lành nghề nắn mũi tên cho thẳng.",
+    pham: "Phẩm Song Yếu — Kệ 3",
+    ke_ngon: "Người ấy mắng ta,\nĐánh ta, thắng ta,\nCướp đoạt của ta.\nAi ôm hiềm hận ấy,\nOán thù không thể dứt.",
+    y_nghia: "Khi ta nhớ mãi những tổn thương, sỉ nhục hay mất mát do người khác gây ra — oán hận ấy sẽ không bao giờ tắt. Chính ta trở thành người canh giữ ngọn lửa đốt mình.",
   },
   {
     id: 4,
-    pham: "Phẩm Hoa — Kệ 49",
-    ke_ngon:
-      "Như ong hút mật hoa,\nKhông hại sắc hương hoa,\nBậc Mâu Ni vào làng,\nÁnh mắt chẳng ngó nhìn.",
-    y_nghia:
-      "Bậc tu hành sống giữa cuộc đời như ong lấy mật — nhận những gì cần thiết mà không gây tổn hại, không vì tham ái mà làm tổn thương ai, không để cảnh bên ngoài kéo tâm vào dính mắc.",
+    pham: "Phẩm Song Yếu — Kệ 4",
+    ke_ngon: "Người ấy mắng ta,\nĐánh ta, thắng ta,\nCướp đoạt của ta.\nAi không ôm hận ấy,\nOán thù liền tiêu tan.",
+    y_nghia: "Buông bỏ không có nghĩa là chấp nhận bất công. Mà là từ chối để bất công ấy tiếp tục giam cầm tâm ta. Khi không nuôi dưỡng hận thù, ta thực sự tự do.",
   },
   {
     id: 5,
-    pham: "Phẩm Ngàn — Kệ 100",
-    ke_ngon:
-      "Dù nói ngàn lời lẽ,\nNhưng không gì lợi ích,\nTốt hơn một câu nghĩa,\nNghe xong, tâm tịnh an.",
-    y_nghia:
-      "Ngàn lời rỗng tuếch không bằng một câu chân thật có trí tuệ. Trên con đường tu học, phẩm chất quan trọng hơn số lượng. Một điều hiểu thấu còn giá trị hơn vạn điều nghe qua tai mà lòng không chuyển.",
+    pham: "Phẩm Song Yếu — Kệ 5",
+    ke_ngon: "Không phải oán thù,\nCó thể diệt oán thù.\nChỉ có không oán thù,\nMới diệt được oán thù.\nĐó là định luật ngàn đời.",
+    y_nghia: "Oán trả oán, hận đáp hận — vòng xoáy ấy không có hồi kết. Chỉ có từ bi và tâm không thù hận mới thực sự chấm dứt được vòng lặp khổ đau này.",
   },
   {
     id: 6,
-    pham: "Phẩm Già — Kệ 153",
-    ke_ngon:
-      "Lang thang bao kiếp sống,\nTa tìm nhưng chẳng gặp,\nKẻ xây dựng ngôi nhà.\nKhổ thay, đời tái sanh!",
-    y_nghia:
-      "Đây là lời Đức Phật thốt lên khi chứng ngộ dưới cội Bồ Đề. \"Ngôi nhà\" ám chỉ bản ngã (tự ngã), \"người thợ xây\" là tham ái. Khi thấy rõ gốc rễ khổ đau, vòng luân hồi mới được cởi bỏ.",
+    pham: "Phẩm Song Yếu — Kệ 6",
+    ke_ngon: "Người khác không biết\nRằng ta đây sắp chết.\nNhững ai biết điều đó,\nNhờ vậy tranh chấp dứt.",
+    y_nghia: "Khi nhận ra sự vô thường — rằng cả ta và người kia đều sẽ chết — thì những tranh chấp nhỏ nhặt bỗng trở nên vô nghĩa. Cái chết là người thầy dạy ta trân trọng hiện tại.",
   },
   {
     id: 7,
-    pham: "Phẩm Ác — Kệ 117",
-    ke_ngon:
-      "Nếu người làm điều ác,\nĐừng tiếp tục làm nữa.\nĐừng ưa thích điều ác,\nVì chứa chấp khổ đau.",
-    y_nghia:
-      "Ai cũng có thể phạm lỗi. Điều quan trọng không phải là chưa từng làm sai, mà là biết dừng lại khi nhận ra. Không nuôi dưỡng ác pháp trong tâm — đó là bước đầu của sự chuyển hóa.",
+    pham: "Phẩm Song Yếu — Kệ 7",
+    ke_ngon: "Ai chạy theo hỷ ái,\nỞ đời không kềm thúc,\nĂn uống không tiết độ,\nLười biếng, tinh tấn yếu —\nMa vương sẽ dập tan,\nNhư gió quật cây yếu.",
+    y_nghia: "Người sống buông thả theo dục lạc, không tiết chế thân tâm, không nuôi dưỡng tinh tấn — là người dễ bị bão tố cuộc đời quật ngã nhất. Sức mạnh nội tâm phải được rèn giũa mỗi ngày.",
   },
   {
     id: 8,
-    pham: "Phẩm Thiện — Kệ 118",
-    ke_ngon:
-      "Nếu người làm điều lành,\nHãy tiếp tục làm nữa.\nHãy ưa thích điều lành,\nVì chứa chấp an vui.",
-    y_nghia:
-      "Thiện pháp cần được vun trồng mỗi ngày, không ngừng nghỉ. Như ngọn lửa cần được thêm củi, tâm thiện lành cần được nuôi dưỡng liên tục bằng những hành động, lời nói và suy nghĩ trong sáng.",
+    pham: "Phẩm Song Yếu — Kệ 8",
+    ke_ngon: "Ai không chạy theo hỷ ái,\nỞ đời khéo kềm thúc,\nĂn uống có tiết độ,\nCó lòng tin, tinh tấn —\nMa vương không thể lay,\nNhư gió lay núi đá.",
+    y_nghia: "Người biết tiết chế, có niềm tin vững chắc và nỗ lực tu tập — tâm họ như núi đá vững chắc, không một cơn bão thế gian nào có thể lay chuyển.",
   },
   {
     id: 9,
-    pham: "Phẩm Đạo — Kệ 183",
-    ke_ngon:
-      "Không làm mọi điều ác,\nThành tựu các hạnh lành,\nTâm ý giữ trong sạch:\nChính lời chư Phật dạy.",
-    y_nghia:
-      "Đây là cốt lõi giáo lý của mọi vị Phật: lánh dữ, làm lành, và thanh lọc tâm. Ba điều này tuy giản dị nhưng là cả con đường giải thoát — không thừa, không thiếu.",
+    pham: "Phẩm Song Yếu — Kệ 9",
+    ke_ngon: "Ai mặc y cà-sa\nNhưng lòng chưa thanh tịnh,\nKhông tự chế, không thật —\nKhông xứng chiếc y ấy.",
+    y_nghia: "Hình thức tu hành bên ngoài không có giá trị nếu nội tâm chưa được chuyển hóa. Chiếc áo không làm nên thầy tu — chính tâm thanh tịnh và đức hạnh thật sự mới là điều quan trọng.",
   },
   {
     id: 10,
-    pham: "Phẩm Phật Đà — Kệ 183",
-    ke_ngon:
-      "Hãy tự mình thắp đuốc\nMà đi, hãy nỗ lực,\nHãy tự mình tinh tấn.\nLà bến đỗ an toàn.",
-    y_nghia:
-      "Lời Đức Phật nhắn nhủ trước lúc nhập diệt: mỗi người là ngọn đèn của chính mình. Không ai có thể giác ngộ thay ta. Hãy tinh tấn, hãy tỉnh thức — chính ta là chỗ nương tựa vững chắc nhất.",
+    pham: "Phẩm Song Yếu — Kệ 10",
+    ke_ngon: "Ai mặc y cà-sa\nVới lòng đã thanh tịnh,\nTự chế, thật thành thật —\nXứng đáng chiếc y ấy.",
+    y_nghia: "Khi hành động bên ngoài và tâm thức bên trong hòa hợp — khi hình thức và bản chất đồng nhất — đó mới là người tu hành thật sự, xứng đáng với con đường mình đang đi.",
   },
   {
     id: 11,
-    pham: "Phẩm Vui — Kệ 197",
-    ke_ngon:
-      "Hạnh phúc thay, chúng ta sống,\nKhông thù, giữa các thù hận!\nGiữa những người thù hận,\nTa sống không thù hận.",
-    y_nghia:
-      "Không phải vắng mặt kẻ thù mà tạo ra bình yên — mà là tâm không mang thù hận. Sống giữa thế giới đầy xung đột với trái tim không hận thù là bài học cao quý nhất của từ bi.",
+    pham: "Phẩm Song Yếu — Kệ 11",
+    ke_ngon: "Kẻ lầm tưởng phi thực,\nThấy thực trong phi thực,\nDo tâm tà hướng dẫn,\nKhông thể đạt chân thật.",
+    y_nghia: "Khi ta nhầm lẫn cái vô thường là trường tồn, cái khổ là vui, cái vô ngã là tự ngã — tâm ta đang đi sai hướng. Trí tuệ bắt đầu từ việc thấy sự vật đúng như nó thật sự là.",
   },
   {
     id: 12,
-    pham: "Phẩm Ái Dục — Kệ 214",
-    ke_ngon:
-      "Từ ái dục sinh ưu,\nTừ ái dục sinh sợ.\nAi giải thoát ái dục,\nKhông ưu, đâu có sợ.",
-    y_nghia:
-      "Mọi nỗi lo âu và sợ hãi đều bắt nguồn từ sự dính mắc. Khi ta yêu thứ gì quá mức, ta sợ mất nó. Buông bỏ không có nghĩa là hờ hững — mà là yêu thương với trái tim rộng mở, không nắm giữ.",
+    pham: "Phẩm Song Yếu — Kệ 12",
+    ke_ngon: "Ai thấy thực trong thực,\nThấy phi thực trong phi thực,\nDo tâm chánh hướng dẫn,\nSẽ đạt được chân thật.",
+    y_nghia: "Người có trí tuệ chánh kiến — thấy vô thường là vô thường, thấy khổ là khổ — tâm họ hướng đúng về giải thoát. Chánh kiến là bước đầu tiên của con đường tám ngành.",
   },
   {
     id: 13,
-    pham: "Phẩm Tỳ Kheo — Kệ 362",
-    ke_ngon:
-      "Ai nhiếp phục được tay,\nAi nhiếp phục được chân,\nAi nhiếp phục được lời,\nVị tối thượng tự chế.",
-    y_nghia:
-      "Giới luật bắt đầu từ ba cửa: thân (tay, chân), khẩu (lời nói), và cuối cùng là ý (tâm). Người tự chủ được cả ba là bậc cao thượng, dù không mang danh hiệu hay địa vị gì.",
+    pham: "Phẩm Song Yếu — Kệ 13",
+    ke_ngon: "Như mái nhà không kín,\nMưa liền chui vào được,\nTâm không tu thiền định,\nTham dục liền xâm nhập.",
+    y_nghia: "Tâm không được tu tập, bảo hộ — cũng dễ bị tham dục, sân hận, si mê xâm nhập như mái nhà dột không ngăn được mưa. Thiền định là mái nhà che chở cho tâm ta.",
   },
   {
     id: 14,
+    pham: "Phẩm Song Yếu — Kệ 14",
+    ke_ngon: "Như mái nhà khéo lợp,\nMưa không thể chui vào,\nTâm khéo tu thiền định,\nTham dục không xâm nhập.",
+    y_nghia: "Tâm được rèn luyện qua thiền định và chánh niệm sẽ vững chắc như mái nhà kiên cố. Không phải tham dục biến mất — mà ta không còn bị chúng kéo trôi nữa.",
+  },
+  {
+    id: 15,
+    pham: "Phẩm Song Yếu — Kệ 15",
+    ke_ngon: "Người làm điều ác,\nSầu khổ đời này, đời sau.\nThấy nghiệp ác của mình,\nSầu não khổ não.",
+    y_nghia: "Hậu quả của hành động bất thiện không chờ đến kiếp sau mới đến. Ngay trong đời này, khi nhận ra điều mình đã làm là sai, tâm ta đã mang theo gánh nặng ấy từng ngày.",
+  },
+  {
+    id: 16,
+    pham: "Phẩm Song Yếu — Kệ 16",
+    ke_ngon: "Người làm điều lành,\nVui đời này, đời sau.\nThấy nghiệp lành của mình,\nHân hoan, hỷ lạc.",
+    y_nghia: "Người sống thiện lành mang theo niềm vui không cần ai ban cho. Khi nhìn lại hành trình mình đã đi, lòng họ rộng mở — không phải vì hoàn hảo, mà vì đã sống thật.",
+  },
+  {
+    id: 17,
+    pham: "Phẩm Song Yếu — Kệ 17",
+    ke_ngon: "Kẻ làm điều ác,\nKhổ đời này, đời sau.\nNghĩ: 'Ta đã làm ác',\nKhổ hơn, đọa xứ khổ.",
+    y_nghia: "Ác nghiệp mang theo hai lớp khổ: khổ do hành động, và khổ do lương tâm cắn rứt. Người làm ác không chỉ bị quả báo mà còn mang nỗi ray rứt suốt cuộc đời.",
+  },
+  {
+    id: 18,
+    pham: "Phẩm Song Yếu — Kệ 18",
+    ke_ngon: "Kẻ làm điều thiện,\nVui đời này, đời sau.\nNghĩ: 'Ta đã làm thiện',\nVui hơn, đến cõi vui.",
+    y_nghia: "Người làm lành mang theo niềm vui kép: vui từ hành động và vui từ hồi ức trong sáng. Thiện nghiệp là gia tài không ai lấy được, theo ta qua mọi thăng trầm.",
+  },
+  {
+    id: 19,
+    pham: "Phẩm Song Yếu — Kệ 19",
+    ke_ngon: "Dù tụng nhiều Kinh điển,\nNhưng sống theo phóng dật,\nNhư kẻ chăn bò người,\nKhông phần sa-môn hạnh.",
+    y_nghia: "Học nhiều kinh điển mà không đem vào thực hành — cũng như người chăn bò thuê: chăm sóc bò cho chủ nhưng không được uống sữa. Hiểu biết mà không sống được hiểu biết ấy là vô ích.",
+  },
+  {
+    id: 20,
+    pham: "Phẩm Song Yếu — Kệ 20",
+    ke_ngon: "Dù tụng ít Kinh điển,\nNhưng sống đúng Chánh Pháp,\nTừ bỏ tham sân si —\nTâm giải thoát đúng đắn,\nKhông chấp thế gian này,\nDự phần sa-môn hạnh.",
+    y_nghia: "Một người biết ít nhưng sống trọn vẹn theo những gì mình biết — còn quý hơn người thuộc lòng vạn quyển kinh mà lòng vẫn đầy tham sân. Chiều sâu của thực hành quan trọng hơn chiều rộng của kiến thức.",
+  },
+
+  // ── PHẨM KHÔNG PHÓNG DẬT (21-32) ──
+  {
+    id: 21,
+    pham: "Phẩm Không Phóng Dật — Kệ 21",
+    ke_ngon: "Không phóng dật — bất tử.\nPhóng dật — là tử lộ.\nNgười không phóng dật — sống.\nKẻ phóng dật — như chết.",
+    y_nghia: "Không phóng dật (appamāda) là nền tảng của toàn bộ sự tu tập. Người luôn tỉnh thức, chánh niệm trong từng khoảnh khắc — người đó đang thực sự sống. Kẻ sống qua ngày trong mê muội — chưa thực sự hiện diện.",
+  },
+  {
+    id: 22,
+    pham: "Phẩm Không Phóng Dật — Kệ 22",
+    ke_ngon: "Bậc trí tuệ rõ biết\nSự hơn kém ấy rồi,\nAn trú không phóng dật,\nHoan hỷ trong thánh trí.",
+    y_nghia: "Người trí thấy rõ sự khác nhau giữa người tỉnh thức và người phóng dật — giữa sống thật và sống qua ngày. Từ đó họ chọn con đường chánh niệm, và tìm thấy niềm vui thực sự trong trí tuệ.",
+  },
+  {
+    id: 23,
+    pham: "Phẩm Không Phóng Dật — Kệ 23",
+    ke_ngon: "Những ai thiền định,\nKiên trì, tinh tấn mạnh,\nBậc trí chứng Niết-bàn —\nAn tịnh, vô thượng lạc.",
+    y_nghia: "Thiền định không phải là trốn chạy cuộc đời mà là đi vào chiều sâu nhất của nó. Người kiên trì thiền tập, dần dần chứng được sự bình an không phụ thuộc vào hoàn cảnh bên ngoài.",
+  },
+  {
+    id: 24,
+    pham: "Phẩm Không Phóng Dật — Kệ 24",
+    ke_ngon: "Người cố gắng tinh tấn,\nChánh niệm, hành trong sạch,\nSáng suốt, tự chế ngự,\nSống không phóng dật tâm —\nDanh tiếng ngày thêm lớn.",
+    y_nghia: "Người sống chánh niệm, tự kỷ luật và trong sáng không cần tìm kiếm danh tiếng. Danh tiếng tốt tự nhiên đến — không phải từ màn trình diễn, mà từ phẩm cách tỏa ra mỗi ngày.",
+  },
+  {
+    id: 25,
+    pham: "Phẩm Không Phóng Dật — Kệ 25",
+    ke_ngon: "Bằng tinh tấn, không phóng dật,\nBằng tự chế, tự điều phục —\nBậc trí xây đảo vững,\nMà nước lũ không ngập.",
+    y_nghia: "Người có tu tập xây được một hòn đảo nội tâm vững chắc. Khi bão đời ập đến — mất mát, thất bại, phê phán — họ có chỗ đứng mà không bị cuốn trôi.",
+  },
+  {
+    id: 26,
+    pham: "Phẩm Không Phóng Dật — Kệ 26",
+    ke_ngon: "Kẻ ngu si, vô trí\nChìm đắm trong phóng dật.\nBậc trí không phóng dật,\nNhư người giàu quý tài.",
+    y_nghia: "Chánh niệm và không phóng dật là tài sản quý giá nhất mà người trí gìn giữ cẩn thận. Đó không phải vật chất có thể mất — mà là khả năng nội tâm luôn sẵn có khi được vun trồng.",
+  },
+  {
+    id: 27,
+    pham: "Phẩm Không Phóng Dật — Kệ 27",
+    ke_ngon: "Chớ đắm chìm phóng dật,\nChớ đắm say dục lạc.\nChánh niệm thiền định vững,\nĐạt được hạnh phúc lớn.",
+    y_nghia: "Dục lạc mang lại sự thỏa mãn tức thời nhưng không bền. Hạnh phúc từ chánh niệm và thiền định thì sâu hơn, ổn định hơn, không phụ thuộc vào việc mọi thứ có như ý hay không.",
+  },
+  {
+    id: 28,
+    pham: "Phẩm Không Phóng Dật — Kệ 28",
+    ke_ngon: "Kẻ trí dứt phóng dật,\nLên đài trí tuệ cao,\nNhìn xuống kẻ vô trí —\nKhông sầu, nhìn sầu đời.",
+    y_nghia: "Người đạt trí tuệ không nhìn xuống với sự khinh thường — mà nhìn với lòng từ bi. Họ hiểu gốc rễ khổ đau, và vì thế không bị cuốn vào khổ đau ấy, nhưng vẫn đồng hành với người đang khổ.",
+  },
+  {
+    id: 29,
+    pham: "Phẩm Không Phóng Dật — Kệ 29",
+    ke_ngon: "Không phóng dật giữa phóng dật,\nTỉnh thức giữa ngủ mê,\nBậc trí như tuấn mã,\nVượt ngựa gầy chậm chạp.",
+    y_nghia: "Người chánh niệm giữa thế giới vội vã và mê muội — họ tiến bộ nhanh hơn nhiều người khác, không phải vì thông minh hơn, mà vì họ thực sự hiện diện với mỗi bước đi.",
+  },
+  {
+    id: 30,
+    pham: "Phẩm Không Phóng Dật — Kệ 30",
+    ke_ngon: "Không phóng dật — Maghavā\nĐạt ngôi vị trời cao.\nKhông phóng dật được khen,\nPhóng dật bị chê trách.",
+    y_nghia: "Đế Thích (Indra) theo truyền thuyết đạt địa vị nhờ không phóng dật. Dù ta không tìm địa vị — nhưng người sống tỉnh thức luôn được tin tưởng và kính trọng, vì họ đáng tin cậy.",
+  },
+  {
+    id: 31,
+    pham: "Phẩm Không Phóng Dật — Kệ 31",
+    ke_ngon: "Tỳ kheo vui không phóng dật,\nSợ hãi về phóng dật —\nNhư lửa thiêu kết sử,\nĐi đến gần Niết-bàn.",
+    y_nghia: "Người tu hành xem sự phóng dật — sự mất chánh niệm — là nguy hiểm thực sự, chứ không phải nghèo khó hay thất bại bên ngoài. Khi sợ mất tỉnh thức hơn sợ mất của cải, đó là dấu hiệu tu tập đúng hướng.",
+  },
+  {
+    id: 32,
+    pham: "Phẩm Không Phóng Dật — Kệ 32",
+    ke_ngon: "Tỳ kheo vui không phóng dật,\nSợ hãi về phóng dật —\nKhông thể bị lui sụt,\nGần đến bờ Niết-bàn.",
+    y_nghia: "Người đã thực sự hiểu giá trị của chánh niệm sẽ không dễ dàng rơi vào phóng dật lại. Không phải vì họ hoàn hảo — mà vì họ đã nếm được sự bình an của tỉnh thức.",
+  },
+
+  // ── PHẨM TÂM (33-43) ──
+  {
+    id: 33,
+    pham: "Phẩm Tâm — Kệ 33",
+    ke_ngon: "Tâm dao động, bất định,\nKhó hộ trì, khó điều phục.\nBậc trí uốn nắn tâm,\nNhư thợ làm thẳng tên.",
+    y_nghia: "Tâm ta vốn bất định, phóng túng như con ngựa hoang. Nhưng người trí biết rằng tu tập là công việc cả đời — kiên nhẫn uốn nắn tâm như người thợ lành nghề nắn mũi tên cho thẳng.",
+  },
+  {
+    id: 34,
+    pham: "Phẩm Tâm — Kệ 34",
+    ke_ngon: "Như cá bị quăng lên bờ,\nVùng vẫy thoát nước,\nTâm này dao động mạnh,\nThoát khỏi cõi Ma vương.",
+    y_nghia: "Tâm bị lôi ra khỏi những thói quen cũ — ra khỏi vùng an toàn của tham dục và phóng dật — sẽ giãy dụa như cá trên bờ. Nhưng đó là dấu hiệu của sự chuyển hóa thực sự đang diễn ra.",
+  },
+  {
+    id: 35,
+    pham: "Phẩm Tâm — Kệ 35",
+    ke_ngon: "Tâm khó điều phục hơn,\nNhanh nhẹn hơn gió thổi,\nLành nghề điều phục tâm,\nĐược phúc lợi an lạc.",
+    y_nghia: "Tâm nhanh hơn gió — trong một khoảnh khắc có thể du hành khắp nơi, rơi vào hàng ngàn ý nghĩ. Người điều phục được tâm nhanh nhẹn ấy sẽ tìm thấy sự bình an mà không hoàn cảnh nào phá vỡ được.",
+  },
+  {
+    id: 36,
+    pham: "Phẩm Tâm — Kệ 36",
+    ke_ngon: "Tâm khó thấy, tế nhị,\nVọng động theo ý thích.\nBậc trí hộ trì tâm,\nTâm hộ trì an lạc.",
+    y_nghia: "Tâm tinh tế đến mức ta khó nhận ra những chuyển động của nó. Chỉ qua thực hành chánh niệm lâu dài ta mới bắt đầu thấy tâm di chuyển như thế nào — và từ đó mới có thể bảo vệ nó.",
+  },
+  {
+    id: 37,
+    pham: "Phẩm Tâm — Kệ 37",
+    ke_ngon: "Tâm đi xa một mình,\nVô hình, ẩn hang sâu.\nAi điều phục được tâm,\nThoát khỏi ma buộc trói.",
+    y_nghia: "Tâm lang thang vào quá khứ và tương lai — vào những chỗ ta không thực sự đang ở. Khi kéo tâm về hiện tại, về hơi thở, về khoảnh khắc này — ta cắt đứt sợi dây vô hình buộc ta vào ảo tưởng.",
+  },
+  {
+    id: 38,
+    pham: "Phẩm Tâm — Kệ 38",
+    ke_ngon: "Người tâm không kiên định,\nKhông biết Diệu Pháp đúng,\nLòng tin không vững chắc —\nTrí tuệ không viên mãn.",
+    y_nghia: "Trí tuệ không thể mọc lên từ mảnh đất tâm không ổn định. Cũng như không thể xây nhà trên cát — sự thực hành cần một nền tảng tâm định tĩnh, trong sáng, có niềm tin vững chắc.",
+  },
+  {
+    id: 39,
+    pham: "Phẩm Tâm — Kệ 39",
+    ke_ngon: "Người tâm không ngập tràn,\nTâm không bị dao động,\nVượt phước lẫn phi phước —\nKhông sợ hãi, tỉnh thức.",
+    y_nghia: "Người đã vượt qua sự dính mắc vào cả thiện lẫn ác — không còn bị kéo bởi ham muốn hay sợ hãi — đó là người thực sự tự do. Tự do không phải thiếu vắng mà là không bị điều khiển.",
+  },
+  {
+    id: 40,
+    pham: "Phẩm Tâm — Kệ 40",
+    ke_ngon: "Biết thân như đồ gốm,\nVững tâm như thành trì,\nDùng trí tuệ tấn công,\nGiữ chiến thắng, không mê.",
+    y_nghia: "Hiểu thân xác là tạm bợ như đồ gốm dễ vỡ — nhưng tâm thì xây vững như thành lũy. Người hiểu điều này không hoảng sợ trước bệnh tật, già nua hay cái chết.",
+  },
+  {
+    id: 41,
+    pham: "Phẩm Tâm — Kệ 41",
+    ke_ngon: "Thân này không bao lâu,\nSẽ nằm trên mặt đất.\nBị bỏ, vô ý thức,\nNhư khúc cây vô dụng.",
+    y_nghia: "Nhìn thẳng vào sự thật của thân xác — rằng nó sẽ trở về đất — không phải để bi quan, mà để sống mỗi ngày với sự trân trọng và không dính mắc vào hình thức bên ngoài.",
+  },
+  {
+    id: 42,
+    pham: "Phẩm Tâm — Kệ 42",
+    ke_ngon: "Kẻ thù hại kẻ thù,\nOán tặc hại oán tặc,\nKhông hại bằng tâm sai,\nTự hại lấy chính mình.",
+    y_nghia: "Kẻ thù nguy hiểm nhất không đến từ bên ngoài — mà là chính tâm ta khi bị tham, sân, si dẫn dắt. Không ai có thể hại ta nhiều hơn chính những suy nghĩ và hành động sai lầm của ta.",
+  },
+  {
+    id: 43,
+    pham: "Phẩm Tâm — Kệ 43",
+    ke_ngon: "Mẹ, cha, bà con đều\nKhông làm được điều ấy;\nTâm hướng thiện chân chánh,\nLàm cao thượng chính ta.",
+    y_nghia: "Người thân có thể cho ta nhiều thứ — nhưng không ai có thể tu tập thay ta. Chỉ tâm hướng thiện của chính ta mới có thể nâng cao phẩm giá thật sự của mình.",
+  },
+
+  // ── PHẨM HOA (44-59) ──
+  {
+    id: 44,
+    pham: "Phẩm Hoa — Kệ 44",
+    ke_ngon: "Ai hiểu rõ đất này,\nCõi Yama, cõi trời?\nAi chọn lựa Pháp cú,\nNhư tay chọn chọn hoa?",
+    y_nghia: "Người hiểu được bản chất của cuộc đời — từ cõi người đến cõi trời — là người sẽ biết chọn những lời dạy quý báu để nâng cao đời sống tâm linh, như người sành biết chọn bông hoa đẹp nhất.",
+  },
+  {
+    id: 45,
+    pham: "Phẩm Hoa — Kệ 45",
+    ke_ngon: "Hữu học hiểu đất này,\nCõi Yama, cõi trời!\nHữu học chọn Pháp cú,\nNhư tay thiện chọn hoa.",
+    y_nghia: "Người đang trên con đường học hỏi và tu tập — người hữu học — đang dần hiểu bản chất của cuộc sống, cái chết và sự tái sinh. Họ biết chọn những lời dạy có giá trị thực sự.",
+  },
+  {
+    id: 46,
+    pham: "Phẩm Hoa — Kệ 46",
+    ke_ngon: "Biết thân như bọt nước,\nGiác ngộ tánh ảo ảnh,\nChặt đứt hoa tên Ma,\nĐi nơi vua tử thần không thấy.",
+    y_nghia: "Khi ta thật sự hiểu thân xác mỏng manh như bọt nước và cuộc đời ảo như ảo ảnh — ta không còn sống trong sợ hãi. Cái chết mất đi nanh vuốt của nó khi ta không còn bám víu vào điều tạm bợ.",
+  },
+  {
+    id: 47,
+    pham: "Phẩm Hoa — Kệ 47",
+    ke_ngon: "Người hái các hoa,\nTâm đắm nhiễm ham muốn,\nThần chết cướp đi người,\nNhư lũ lụt cuốn làng ngủ.",
+    y_nghia: "Kẻ mải mê thu hái lạc thú — mải mê đến mức quên mất sự vô thường — sẽ bị cái chết bắt đi bất ngờ như lũ lụt cuốn trôi cả làng đang say giấc. Hãy sống tỉnh thức.",
+  },
+  {
+    id: 48,
+    pham: "Phẩm Hoa — Kệ 48",
+    ke_ngon: "Người hái các hoa,\nTâm đắm nhiễm ham muốn,\nChưa thỏa dục mong cầu —\nĐã bị thần chết chi phối.",
+    y_nghia: "Tham dục không có đáy — thỏa mãn xong lại muốn thêm. Người sống để thỏa mãn ham muốn không bao giờ đến điểm đủ. Cái chết đến trong khi vẫn còn đang thiếu.",
+  },
+  {
+    id: 49,
+    pham: "Phẩm Hoa — Kệ 49",
+    ke_ngon: "Như ong hút mật hoa,\nKhông hại sắc hương hoa,\nBậc Mâu Ni vào làng,\nÁnh mắt chẳng ngó nhìn.",
+    y_nghia: "Bậc tu hành sống giữa cuộc đời như ong lấy mật — nhận những gì cần thiết mà không gây tổn hại, không vì tham ái mà làm tổn thương ai.",
+  },
+  {
+    id: 50,
+    pham: "Phẩm Hoa — Kệ 50",
+    ke_ngon: "Không tìm lỗi người khác,\nKhông xem điều làm, không làm.\nHãy tự xét mình thôi,\nĐiều làm và không làm.",
+    y_nghia: "Chúng ta thường rất giỏi thấy lỗi người khác nhưng mù quáng trước lỗi mình. Khi chuyển ánh mắt từ bên ngoài vào bên trong — đó là lúc sự tu tập thực sự bắt đầu.",
+  },
+  {
+    id: 51,
+    pham: "Phẩm Hoa — Kệ 51",
+    ke_ngon: "Như hoa đẹp sắc màu,\nNhưng không có hương thơm;\nLời nói hay không thật,\nKhông kết quả gì cả.",
+    y_nghia: "Lời nói hay mà không xuất phát từ tâm chân thật — cũng như bông hoa đẹp không có hương. Người nghe có thể bị thu hút nhất thời nhưng không được nuôi dưỡng thực sự.",
+  },
+  {
+    id: 52,
+    pham: "Phẩm Hoa — Kệ 52",
+    ke_ngon: "Như hoa đẹp sắc màu,\nLại có thêm hương thơm;\nLời nói hay có thật,\nKết quả thật tốt đẹp.",
+    y_nghia: "Lời nói chân thật, xuất phát từ trái tim chứa đầy trí tuệ và từ bi — như bông hoa vừa đẹp vừa thơm. Nó không chỉ thu hút mà còn nuôi dưỡng, chữa lành.",
+  },
+  {
+    id: 53,
+    pham: "Phẩm Hoa — Kệ 53",
+    ke_ngon: "Từ đống hoa nhiều,\nKết tràng hoa đẹp.\nCũng vậy, người sanh tử,\nNên làm nhiều thiện nghiệp.",
+    y_nghia: "Từ vô số nguyên liệu sẵn có, người thợ khéo léo tạo ra vòng hoa đẹp. Cuộc đời ta cũng đầy cơ hội làm thiện — trong từng cuộc gặp gỡ, từng lời nói, từng hành động nhỏ.",
+  },
+  {
+    id: 54,
+    pham: "Phẩm Hoa — Kệ 54",
+    ke_ngon: "Hương hoa không ngược gió,\nHương chiên đàn, tu-sa.\nHương người đức hạnh,\nBay ngược gió khắp nơi.",
+    y_nghia: "Hoa thơm chỉ lan theo chiều gió. Nhưng hương thơm của người có đức hạnh — lan tỏa khắp mọi hướng, không phụ thuộc vào hoàn cảnh thuận nghịch, thời gian hay không gian.",
+  },
+  {
+    id: 55,
+    pham: "Phẩm Hoa — Kệ 55",
+    ke_ngon: "Trong các loại hương thơm —\nChiên-đàn, già-la, sen —\nHương giới đức thù thắng,\nVượt trội tất cả hương.",
+    y_nghia: "Trầm hương, chiên đàn, hoa sen — tất cả đều thơm. Nhưng hương thơm của đức hạnh — của người sống trong sáng, giữ giới, có từ bi — thơm hơn tất cả và không bao giờ phai.",
+  },
+  {
+    id: 56,
+    pham: "Phẩm Hoa — Kệ 56",
+    ke_ngon: "Nhỏ thay hương chiên đàn,\nHương già-la nhỏ thay!\nHương người giữ giới luật\nTối thượng đến Thiên giới.",
+    y_nghia: "Những loại hương quý nhất trên đời cũng chỉ lan xa trong phạm vi hữu hạn. Nhưng tiếng thơm của người sống có đức hạnh vượt qua mọi giới hạn của không gian và thời gian.",
+  },
+  {
+    id: 57,
+    pham: "Phẩm Hoa — Kệ 57",
+    ke_ngon: "Với người đủ giới hạnh,\nSống không phóng dật tâm,\nChân chánh, giải thoát đúng —\nMa vương không tìm được.",
+    y_nghia: "Người sống trọn vẹn trong giới hạnh và chánh niệm — Ma vương (những cám dỗ, tham dục, sợ hãi) không tìm thấy chỗ bám víu vào. Họ đã trở nên trong suốt trước những thế lực ấy.",
+  },
+  {
+    id: 58,
+    pham: "Phẩm Hoa — Kệ 58",
+    ke_ngon: "Như hoa sen đẹp tươi,\nMọc lên từ đống rác;\nHương thơm dịu ngát xa,\nLàm vui lòng người đời.",
+    y_nghia: "Hoa sen mọc từ bùn mà không bị bùn nhuộm — biểu tượng của tâm hồn người tu tập. Dù sinh ra trong hoàn cảnh khó khăn, tâm thiện lành vẫn có thể nảy nở và tỏa hương.",
+  },
+  {
+    id: 59,
+    pham: "Phẩm Hoa — Kệ 59",
+    ke_ngon: "Cũng vậy, giữa người mù,\nĐệ tử Phật trí tuệ\nChói sáng hơn rất nhiều,\nGiữa đám người mù lòa.",
+    y_nghia: "Giữa thế giới đang ngủ mê trong vô minh, người có trí tuệ tỏa sáng không phải để khoe khoang mà để soi đường. Ánh sáng trí tuệ không cạnh tranh với bóng tối — nó tự nhiên xua đuổi bóng tối.",
+  },
+
+  // ── PHẨM NGU (60-75) ──
+  {
+    id: 60,
+    pham: "Phẩm Ngu — Kệ 60",
+    ke_ngon: "Đêm dài cho kẻ thức,\nDặm dài cho kẻ mỏi,\nLuân hồi dài cho người\nKhông biết Chánh Pháp thật.",
+    y_nghia: "Đối với người không biết Chánh Pháp, vòng luân hồi cứ kéo dài vô tận — như đêm không bao giờ sáng với người mất ngủ. Trí tuệ là ánh bình minh chấm dứt đêm trường ấy.",
+  },
+  {
+    id: 61,
+    pham: "Phẩm Ngu — Kệ 61",
+    ke_ngon: "Nếu không tìm thấy được\nBậc đồng hành hơn mình,\nHãy sống một mình thôi,\nKhông thân với kẻ ngu.",
+    y_nghia: "Bạn đồng hành sai sẽ kéo ta xuống còn nhanh hơn đi một mình. Thà cô đơn với sự tỉnh thức còn hơn có bạn nhưng đánh mất chính mình. Cô đơn chánh niệm không cô đơn.",
+  },
+  {
+    id: 62,
+    pham: "Phẩm Ngu — Kệ 62",
+    ke_ngon: "'Con ta, tài sản ta' —\nKẻ ngu lo lắng vậy.\nTa không có chính ta,\nCon đâu? Tài sản đâu?",
+    y_nghia: "Cái 'ta' mà ta lo giữ gìn thật ra là một khái niệm không vững chắc. Khi ta không có ngay cả chính mình theo nghĩa thường trụ bất biến — thì 'con ta' và 'của ta' cũng chỉ là ảo tưởng.",
+  },
+  {
+    id: 63,
+    pham: "Phẩm Ngu — Kệ 63",
+    ke_ngon: "Kẻ ngu tự biết ngu,\nNhờ vậy là người trí.\nKẻ ngu nghĩ mình trí —\nThật sự là kẻ ngu.",
+    y_nghia: "Biết mình không biết — đó là sự khởi đầu của trí tuệ. Sự khiêm tốn trí tuệ không phải yếu đuối mà là dũng cảm. Người nghĩ mình đã biết tất cả đã đóng cửa với sự học hỏi.",
+  },
+  {
+    id: 64,
+    pham: "Phẩm Ngu — Kệ 64",
+    ke_ngon: "Dầu trọn đời gần gũi,\nBậc trí tuệ hiền nhân,\nNgười ngu không biết Pháp,\nNhư muỗng không biết vị.",
+    y_nghia: "Có thể ở gần người trí mà không học được gì — nếu tâm không mở, không thực hành. Như chiếc muỗng múc canh cả đời mà không biết vị canh ngọt hay mặn.",
+  },
+  {
+    id: 65,
+    pham: "Phẩm Ngu — Kệ 65",
+    ke_ngon: "Dầu chỉ một tháng thôi,\nGần bậc trí hiền nhân,\nNgười trí biết được Pháp,\nNhư lưỡi nếm vị canh.",
+    y_nghia: "Một tháng với thầy giỏi, với tâm thật sự mở và cầu học — có thể mang lại sự chuyển hóa sâu sắc hơn nhiều năm chỉ hiện diện bề mặt. Cách ta lắng nghe quan trọng hơn thời gian ta ngồi.",
+  },
+  {
+    id: 66,
+    pham: "Phẩm Ngu — Kệ 66",
+    ke_ngon: "Kẻ ngu tự hại mình,\nHành động như kẻ thù.\nTự làm ác nghiệp nặng,\nQuả đắng sẽ đến mình.",
+    y_nghia: "Người làm điều bất thiện không phải đang chiến thắng ai — mà đang tự gây họa cho mình. Mỗi hành động tạo nghiệp là gieo hạt giống sẽ nảy mầm trong chính cuộc đời ta.",
+  },
+  {
+    id: 67,
+    pham: "Phẩm Ngu — Kệ 67",
+    ke_ngon: "Nghiệp ấy không khéo làm,\nSau làm người ăn năn,\nMặt nhuốm lệ khóc than —\nGặt lấy quả nghiệp ác.",
+    y_nghia: "Khi làm điều sai, ta không thể rút lại thời gian. Nhưng ta có thể học từ hối hận — không phải để trừng phạt bản thân mà để không lặp lại. Hối hận có trí tuệ là bước đầu chuyển hóa.",
+  },
+  {
+    id: 68,
+    pham: "Phẩm Ngu — Kệ 68",
+    ke_ngon: "Nghiệp ấy khéo léo làm,\nSau làm không ăn năn,\nMặt hân hoan vui mừng —\nGặt lấy quả nghiệp lành.",
+    y_nghia: "Làm điều thiện không mang lại sự hối tiếc. Nhìn lại hành trình thiện lành của mình, lòng tự nhiên nhẹ nhàng, vui mừng — không phải vì tự hào mà vì biết mình đã đi đúng hướng.",
+  },
+  {
+    id: 69,
+    pham: "Phẩm Ngu — Kệ 69",
+    ke_ngon: "Người ngu tưởng ngọt bùi,\nKhi ác chưa trổ quả.\nKhi ác đã trổ quả,\nNgười ngu mới chịu khổ.",
+    y_nghia: "Nghiệp ác không phải lúc nào cũng cho kết quả ngay. Vì thế kẻ thiếu trí tuệ tưởng rằng mình thoát khỏi hậu quả. Nhưng hạt giống đã gieo — chỉ chờ đủ điều kiện là nảy mầm.",
+  },
+  {
+    id: 70,
+    pham: "Phẩm Ngu — Kệ 70",
+    ke_ngon: "Dù tháng ăn ít ỏi,\nDùng đầu cọng cỏ tranh,\nKhông bằng một phần mười sáu\nBậc thấu triệt Chánh Pháp.",
+    y_nghia: "Tự hành xác bên ngoài không dẫn đến giải thoát. Giá trị của một khoảnh khắc thực sự hiểu được Chánh Pháp còn lớn hơn bao nhiêu năm khổ hạnh mà tâm không được chuyển hóa.",
+  },
+  {
+    id: 71,
+    pham: "Phẩm Ngu — Kệ 71",
+    ke_ngon: "Nghiệp ác mới làm xong,\nChưa kết quả liền ngay.\nNhư lửa phủ tro nguội,\nĐốt người ngu âm ỉ.",
+    y_nghia: "Ác nghiệp âm ỉ trong tâm như lửa dưới tro — ta tưởng đã tắt nhưng vẫn còn đó. Khi gặp điều kiện thuận lợi, nó bùng cháy trở lại. Chỉ có sự chuyển hóa tận gốc mới thật sự dập tắt.",
+  },
+  {
+    id: 72,
+    pham: "Phẩm Ngu — Kệ 72",
+    ke_ngon: "Kẻ ngu cầu danh tiếng,\nMuốn ngồi hàng tỳ kheo,\nMuốn quyền lực tự viện,\nMuốn người khác cúng dường.",
+    y_nghia: "Đây là những cạm bẫy tinh vi nhất của người tu hành — tìm kiếm địa vị, quyền lực và sự tôn trọng dưới vỏ bọc tu tập. Khi động cơ bên trong là danh lợi, con đường đã đi lạc.",
+  },
+  {
+    id: 73,
+    pham: "Phẩm Ngu — Kệ 73",
+    ke_ngon: "'Hãy biết việc này ta đã làm,\nCả tại gia lẫn xuất gia,\nHãy tùy ta trong mọi việc' —\nÝ nghĩ kẻ ngu phình to.",
+    y_nghia: "Khi ego bắt đầu thổi phồng — muốn được công nhận, muốn làm thủ lĩnh, muốn người khác phụ thuộc vào mình — đó là lúc sự tu tập đã bị ego xâm chiếm từ bên trong.",
+  },
+  {
+    id: 74,
+    pham: "Phẩm Ngu — Kệ 74",
+    ke_ngon: "Hai con đường khác nhau:\nĐường lợi lộc thế gian,\nVà đường đến Niết-bàn.\nTỳ kheo Phật đệ tử,\nHiểu rõ điều ấy rồi —\nKhông tham danh lợi đời.",
+    y_nghia: "Người thực sự tu học hiểu rằng con đường tìm kiếm danh lợi thế gian và con đường giải thoát đi hai hướng khác nhau. Không thể đi cả hai cùng lúc — phải chọn.",
+  },
+  {
+    id: 75,
+    pham: "Phẩm Ngu — Kệ 75",
+    ke_ngon: "Thân cận người hiền trí,\nKhông thể sớm học được.\nNhư thìa không nếm canh,\nKẻ ngu trong suốt đời.",
+    y_nghia: "Chỉ ở gần người hiền mà không thực hành — trí tuệ không thể thấm vào. Học Pháp không phải là thu thập thông tin mà là để những lời dạy chạm vào tim và thay đổi cách ta sống.",
+  },
+
+  // ── PHẨM HIỀN TRÍ (76-89) ──
+  {
+    id: 76,
+    pham: "Phẩm Hiền Trí — Kệ 76",
+    ke_ngon: "Hãy nhìn người hiền trí\nChỉ lỗi và khiển trách,\nNhư chỉ chỗ kho báu.\nThân cận người như vậy,\nSẽ tốt hơn không xấu.",
+    y_nghia: "Người dám chỉ ra lỗi lầm của ta — không phải để hạ thấp mà để ta tiến bộ — đó là người bạn quý giá nhất. Hãy trân trọng những người đủ dũng cảm và thương yêu để nói thật.",
+  },
+  {
+    id: 77,
+    pham: "Phẩm Hiền Trí — Kệ 77",
+    ke_ngon: "Hãy dạy, hãy chỉ dạy,\nHãy ngăn điều bất thiện.\nNgười ấy được người trí,\nMến, kẻ ác chẳng thích.",
+    y_nghia: "Người dám nói thật, khuyên nhủ và ngăn điều sai — sẽ được người trí quý mến nhưng kẻ xấu tránh xa. Đây là dấu hiệu tốt chứ không phải xấu. Hãy coi đó là sự xác nhận đang đi đúng hướng.",
+  },
+  {
+    id: 78,
+    pham: "Phẩm Hiền Trí — Kệ 78",
+    ke_ngon: "Chớ thân với bạn ác,\nChớ thân với người hèn.\nHãy thân với bạn lành,\nThân với người cao thượng.",
+    y_nghia: "Người ta ta giao du hằng ngày ảnh hưởng đến ta sâu sắc hơn ta nghĩ. Không phải xa lánh người đau khổ — mà là có sự phân biện trong việc chọn ai làm bạn đồng hành trên con đường.",
+  },
+  {
+    id: 79,
+    pham: "Phẩm Hiền Trí — Kệ 79",
+    ke_ngon: "Ai uống được Chánh Pháp,\nSống an lạc tâm tư.\nBậc trí luôn hoan hỷ\nTrong Pháp bậc thánh dạy.",
+    y_nghia: "Người thấm nhuần Chánh Pháp — không chỉ biết mà còn sống được theo Pháp — sẽ tìm thấy sự an lạc bền vững, không phụ thuộc vào may rủi bên ngoài. Đây là hạnh phúc không ai lấy đi được.",
+  },
+  {
+    id: 80,
+    pham: "Phẩm Hiền Trí — Kệ 80",
+    ke_ngon: "Thợ trị thủy dẫn nước,\nThợ làm tên nắn tên,\nThợ mộc uốn gỗ cây,\nBậc trí tự điều phục.",
+    y_nghia: "Người thợ giỏi nào cũng biết rằng vật liệu cần được chế tác với kiên nhẫn và kỹ năng. Tâm ta là vật liệu quý nhất — và ta chính là người thợ, không ai có thể làm thay.",
+  },
+  {
+    id: 81,
+    pham: "Phẩm Hiền Trí — Kệ 81",
+    ke_ngon: "Như đá tảng kiên cố,\nKhông gió nào lay chuyển.\nBậc trí không dao động,\nGiữa khen chê của đời.",
+    y_nghia: "Khen và chê là hai mặt không tránh khỏi của cuộc đời. Người trí không bị bứt lên bởi lời khen hay bị nhấn chìm bởi lời chê — họ vững chắc như đá tảng giữa sóng gió.",
+  },
+  {
+    id: 82,
+    pham: "Phẩm Hiền Trí — Kệ 82",
+    ke_ngon: "Cũng như hồ nước sâu,\nYên tĩnh, không khuấy đục.\nBậc trí nghe Chánh Pháp,\nTâm trở nên tịnh lặng.",
+    y_nghia: "Trí tuệ giống như hồ nước sâu — không dễ bị khuấy động bởi những làn gió nhỏ. Người thật sự hiểu Chánh Pháp sẽ có tâm tĩnh lặng tự nhiên, không cần cố gắng tạo ra sự tĩnh lặng đó.",
+  },
+  {
+    id: 83,
+    pham: "Phẩm Hiền Trí — Kệ 83",
+    ke_ngon: "Bậc thiện nhân từ bỏ,\nKhông nói chuyện dục vọng,\nDù cảm xúc lạc hay khổ —\nBậc trí không lên cao, xuống thấp.",
+    y_nghia: "Người có tu tập không bị cuốn bởi những làn sóng cảm xúc — không bay lên quá cao khi vui, không chìm xuống quá sâu khi khổ. Đó không phải là lạnh lùng mà là sự bình thản sâu sắc.",
+  },
+  {
+    id: 84,
+    pham: "Phẩm Hiền Trí — Kệ 84",
+    ke_ngon: "Vì mình hay vì người,\nKhông ước muốn con trai,\nTài sản hay quốc độ.\nBằng bất chánh tìm thành công.\nVị ấy có giới đức, trí tuệ, pháp.",
+    y_nghia: "Người có đức hạnh thật sự không dùng phương tiện bất chính dù mục đích có vẻ tốt đẹp. Con đường và đích đến phải nhất quán. Không thể gieo hạt độc mà mong thu hoạch trái ngọt.",
+  },
+  {
+    id: 85,
+    pham: "Phẩm Hiền Trí — Kệ 85",
+    ke_ngon: "Ít người trong thế gian\nQua bờ kia được đến.\nSố đông nhân loại này,\nChạy xuôi bờ bên này.",
+    y_nghia: "Số người thật sự tu tập và đạt giải thoát thì ít. Đại đa số vẫn bị cuốn theo dòng chảy của tham dục, sân hận và si mê. Điều đó không làm con đường kém giá trị — chỉ nhắc ta đừng thụ động.",
+  },
+  {
+    id: 86,
+    pham: "Phẩm Hiền Trí — Kệ 86",
+    ke_ngon: "Ai sống theo Chánh Pháp,\nGiáo Pháp được khéo nói,\nSẽ vượt qua bờ kia,\nVượt ma vương khó thoát.",
+    y_nghia: "Người thực hành Chánh Pháp — không chỉ biết — sẽ vượt qua được những ràng buộc mà đa số không vượt qua được. Thực hành là chiếc thuyền, kiến thức chỉ là bản đồ.",
+  },
+  {
+    id: 87,
+    pham: "Phẩm Hiền Trí — Kệ 87",
+    ke_ngon: "Hãy từ bỏ pháp đen,\nBậc trí tu pháp trắng.\nTừ nhà đến không nhà,\nTrong xa lánh khó sống.",
+    y_nghia: "Con đường tu tập là sự chuyển hóa từ tối sang sáng — từ những tập quán bất thiện sang những phẩm chất trong sáng. Đây là cuộc hành trình từ 'nhà' quen thuộc sang không gian mở của tự do.",
+  },
+  {
+    id: 88,
+    pham: "Phẩm Hiền Trí — Kệ 88",
+    ke_ngon: "Hãy mong muốn niềm vui,\nNơi không có dục vọng.\nBậc trí từ bỏ xong,\nTrở thành người thanh tịnh.",
+    y_nghia: "Niềm vui thật sự không đến từ việc thỏa mãn dục vọng mà từ trạng thái tâm không bị dục vọng kéo đi. Đây là nghịch lý — buông bỏ tham muốn mang lại hạnh phúc nhiều hơn thỏa mãn tham muốn.",
+  },
+  {
+    id: 89,
+    pham: "Phẩm Hiền Trí — Kệ 89",
+    ke_ngon: "Ai tâm khéo tu tập,\nTrong các giác chi Phật,\nKhông chấp thủ, hoan hỷ\nTrong buông bỏ chấp thủ;\nChói sáng, lậu hoặc tận —\nBậc ấy, đời tịch diệt.",
+    y_nghia: "Người tu tập đầy đủ bảy giác chi — chánh niệm, trạch pháp, tinh tấn, hỷ, khinh an, định, xả — sẽ đạt được trạng thái không còn lậu hoặc. Đây là sự giải thoát hoàn toàn.",
+  },
+
+  // ── PHẨM NGHÌN (100-115) ──
+  {
+    id: 90,
+    pham: "Phẩm Ngàn — Kệ 100",
+    ke_ngon: "Dù nói ngàn lời lẽ,\nNhưng không gì lợi ích,\nTốt hơn một câu nghĩa,\nNghe xong, tâm tịnh an.",
+    y_nghia: "Ngàn lời rỗng tuếch không bằng một câu chân thật có trí tuệ. Một điều hiểu thấu còn giá trị hơn vạn điều nghe qua tai mà lòng không chuyển.",
+  },
+  {
+    id: 91,
+    pham: "Phẩm Ngàn — Kệ 101",
+    ke_ngon: "Dù đọc ngàn bài kệ,\nNhưng không gì lợi ích,\nTốt hơn một câu kệ,\nNghe xong, tâm tịnh an.",
+    y_nghia: "Đọc thuộc vạn bài kinh mà không hiểu — cũng như đếm tiền hộ người khác. Một câu kệ được thực sự thấu hiểu và đem vào đời sống có giá trị hơn tủ sách không được tiêu hóa.",
+  },
+  {
+    id: 92,
+    pham: "Phẩm Ngàn — Kệ 102",
+    ke_ngon: "Dù tụng trăm bài kệ,\nNhưng không gì lợi ích,\nTốt hơn một pháp cú,\nNghe xong, tâm tịnh an.",
+    y_nghia: "Chánh Pháp không đo bằng số lượng — đo bằng chiều sâu thấu hiểu và chiều rộng của sự chuyển hóa. Hãy học ít mà thật, hiểu sâu mà sống được.",
+  },
+  {
+    id: 93,
+    pham: "Phẩm Ngàn — Kệ 103",
+    ke_ngon: "Dù thắng trăm ngàn giặc,\nTại trận địa chiến tranh.\nTự thắng mình mới thắng,\nThật chiến thắng tối cao.",
+    y_nghia: "Chiến thắng vĩ đại nhất không phải là chiến thắng kẻ thù bên ngoài — mà là chiến thắng tham, sân, si bên trong. Kẻ thù hung hãn nhất ở ngay trong tâm ta.",
+  },
+  {
+    id: 94,
+    pham: "Phẩm Ngàn — Kệ 104",
+    ke_ngon: "Tự thắng mình hơn nhiều,\nHơn thắng người khác đó.\nAi khéo điều phục mình,\nSống luôn luôn tự chế.",
+    y_nghia: "Người điều phục được chính mình — những phản ứng tự động, những tập khí cũ, những ham muốn bốc đồng — đã đạt được chiến thắng mà không một triều đình hay quân đội nào có thể ban cho.",
+  },
+  {
+    id: 95,
+    pham: "Phẩm Ngàn — Kệ 105",
+    ke_ngon: "Trời, Càn-thát-bà, Ma,\nCũng Phạm thiên ở đời.\nKhông thể thắng người ấy,\nĐã khéo tự điều phục.",
+    y_nghia: "Không có thế lực nào — dù thần thánh hay thế gian — có thể khuất phục người đã chiến thắng chính mình. Tự do thật sự nằm ở bên trong, và không ai lấy đi được.",
+  },
+  {
+    id: 96,
+    pham: "Phẩm Ngàn — Kệ 106",
+    ke_ngon: "Tháng tháng bố thí nhiều,\nNgàn thứ, một ngàn lần;\nMột lần cúng dường đến\nBậc tự tu tự chứng —\nHơn mọi cuộc bố thí.",
+    y_nghia: "Phẩm chất của sự cho quan trọng hơn số lượng. Một lần cúng dường với lòng thành kính đến bậc có đức hạnh thật sự — có giá trị tinh thần vượt xa ngàn lần bố thí hào phóng nhưng hời hợt.",
+  },
+  {
+    id: 97,
+    pham: "Phẩm Ngàn — Kệ 107",
+    ke_ngon: "Ai trăm năm thờ lửa\nTrong rừng cúng tế đó;\nMột lần cung kính đến\nBậc tự tu tự chứng —\nHơn trăm năm cúng tế.",
+    y_nghia: "Trăm năm thực hành nghi lễ bên ngoài không bằng một khoảnh khắc thực sự kết nối với trí tuệ và đức hạnh. Tôn giáo không nằm ở nghi thức mà ở sự chuyển hóa tâm hồn.",
+  },
+  {
+    id: 98,
+    pham: "Phẩm Ngàn — Kệ 108",
+    ke_ngon: "Cả năm cúng tế đó,\nMọi tế lễ trên đời;\nKhông bằng phần mười sáu\nCủa sự kính trọng chân thật.",
+    y_nghia: "Sự kính trọng chân thật — sự tôn trọng phát xuất từ trái tim hiểu biết, không phải nghi thức xã hội — có giá trị vượt xa mọi lễ nghi hào nhoáng bên ngoài.",
+  },
+  {
+    id: 99,
+    pham: "Phẩm Ngàn — Kệ 109",
+    ke_ngon: "Ai thường kính lễ người,\nVà hay tôn trọng bậc,\nTrưởng thượng; bốn pháp tăng:\nThọ mạng, sắc, lạc, lực.",
+    y_nghia: "Người biết kính trọng bậc trưởng thượng — không phải vì địa vị mà vì đức hạnh — sẽ được lợi ích ngay trong cuộc đời này: sức khỏe, vẻ đẹp nội tâm, an lạc và sức mạnh tinh thần.",
+  },
+  {
+    id: 100,
+    pham: "Phẩm Ngàn — Kệ 110",
+    ke_ngon: "Sống một trăm năm đời,\nVô giới, tâm không định;\nChỉ một ngày sống thôi,\nGiới đức, tu thiền định.",
+    y_nghia: "Sống trăm năm vô nghĩa không bằng một ngày sống trọn vẹn trong giới hạnh và chánh niệm. Không phải số ngày ta sống — mà là chất lượng sự hiện diện trong từng ngày đó mới quan trọng.",
+  },
+  {
+    id: 101,
+    pham: "Phẩm Ngàn — Kệ 111",
+    ke_ngon: "Sống một trăm năm đời,\nÁc tuệ, không định tâm;\nChỉ một ngày sống thôi,\nTrí tuệ, tu thiền định.",
+    y_nghia: "Trí tuệ không đo bằng năm tháng học hỏi mà bằng sự thấm nhuần thực sự vào cuộc sống. Một ngày sống với trí tuệ tỉnh thức có giá trị hơn trăm năm sống trong mê muội.",
+  },
+  {
+    id: 102,
+    pham: "Phẩm Ngàn — Kệ 112",
+    ke_ngon: "Sống một trăm năm đời,\nLười biếng, tinh tấn yếu;\nChỉ một ngày sống thôi,\nTinh tấn, siêng dõng mãnh.",
+    y_nghia: "Tinh tấn — nỗ lực kiên trì không bỏ cuộc — là phẩm chất quan trọng hơn thời gian. Một ngày sống với nỗ lực thực sự có thể tạo ra sự chuyển hóa mà trăm năm lười biếng không bao giờ đạt được.",
+  },
+  {
+    id: 103,
+    pham: "Phẩm Ngàn — Kệ 113",
+    ke_ngon: "Sống trăm năm ở đời,\nKhông thấy sanh diệt pháp;\nChỉ một ngày sống thôi,\nThấy được lý sanh diệt.",
+    y_nghia: "Một khoảnh khắc thực sự thấy được bản chất vô thường — thấy sự sinh diệt của mọi hiện tượng — còn quý hơn trăm năm sống mà mắt nhắm với thực tại. Đó là trí tuệ giải thoát.",
+  },
+  {
+    id: 104,
+    pham: "Phẩm Ngàn — Kệ 114",
+    ke_ngon: "Sống trăm năm ở đời,\nKhông thấy đường bất tử;\nChỉ một ngày sống thôi,\nThấy được đường bất tử.",
+    y_nghia: "Con đường bất tử — Niết-bàn, sự tịch diệt của tham sân si — không cần trăm năm để tìm kiếm. Một ngày thực sự nhìn thấy con đường ấy còn quý hơn đời người lang thang không mục tiêu.",
+  },
+  {
+    id: 105,
+    pham: "Phẩm Ngàn — Kệ 115",
+    ke_ngon: "Sống trăm năm ở đời,\nKhông thấy Pháp tối thượng;\nChỉ một ngày sống thôi,\nThấy được Pháp tối thượng.",
+    y_nghia: "Chánh Pháp — chân lý về sự khổ, nguyên nhân, sự chấm dứt và con đường chấm dứt khổ — là pháp tối thượng. Ngày nào ta thực sự hiểu điều này, ngày đó thật sự có ý nghĩa.",
+  },
+
+  // ── PHẨM ÁC (116-128) ──
+  {
+    id: 106,
+    pham: "Phẩm Ác — Kệ 116",
+    ke_ngon: "Hãy gấp làm điều lành,\nNgăn tâm xa điều ác.\nAi biếng nhác làm lành,\nTâm ưa thích điều ác.",
+    y_nghia: "Thiện pháp cần sự chủ động — nó không tự nhiên xảy ra. Nếu ta không tích cực làm thiện, tâm sẽ trôi về phía ác theo quán tính. Tinh tấn không phải tùy chọn mà là điều kiện.",
+  },
+  {
+    id: 107,
+    pham: "Phẩm Ác — Kệ 117",
+    ke_ngon: "Nếu người làm điều ác,\nĐừng tiếp tục làm nữa.\nĐừng ưa thích điều ác,\nVì chứa chấp khổ đau.",
+    y_nghia: "Ai cũng có thể phạm lỗi. Điều quan trọng không phải là chưa từng làm sai, mà là biết dừng lại khi nhận ra. Không nuôi dưỡng ác pháp trong tâm — đó là bước đầu của sự chuyển hóa.",
+  },
+  {
+    id: 108,
+    pham: "Phẩm Thiện — Kệ 118",
+    ke_ngon: "Nếu người làm điều lành,\nHãy tiếp tục làm nữa.\nHãy ưa thích điều lành,\nVì chứa chấp an vui.",
+    y_nghia: "Thiện pháp cần được vun trồng mỗi ngày, không ngừng nghỉ. Như ngọn lửa cần được thêm củi, tâm thiện lành cần được nuôi dưỡng liên tục bằng những hành động, lời nói và suy nghĩ trong sáng.",
+  },
+  {
+    id: 109,
+    pham: "Phẩm Ác — Kệ 119",
+    ke_ngon: "Kẻ ác thấy hạnh phúc\nKhi ác chưa trổ quả.\nKhi ác đã trổ quả,\nKẻ ác mới thấy khổ.",
+    y_nghia: "Nghiệp không phải kế toán trả tiền ngay lập tức. Đôi khi người làm ác vẫn thịnh vượng trong thời gian dài. Nhưng hạt giống ác nghiệp vẫn đang lặng lẽ nảy mầm trong lòng đất.",
+  },
+  {
+    id: 110,
+    pham: "Phẩm Ác — Kệ 120",
+    ke_ngon: "Người lành thấy khổ đau\nKhi lành chưa trổ quả.\nKhi lành đã trổ quả,\nNgười lành mới thấy vui.",
+    y_nghia: "Làm lành không phải lúc nào cũng được đền bù ngay. Đôi khi người tốt lành gặp khó khăn trước. Nhưng thiện nghiệp đang lặng lẽ tích lũy — và kết quả của nó bền vững hơn bất kỳ may mắn tức thời nào.",
+  },
+  {
+    id: 111,
+    pham: "Phẩm Ác — Kệ 121",
+    ke_ngon: "Chớ khinh điều ác nhỏ,\nNghĩ rằng: 'chưa đến ta'.\nNước nhỏ từng giọt rơi,\nDần đầy cả hũ lớn.",
+    y_nghia: "Không có ác hành nhỏ đến mức có thể bỏ qua. Từng lần nói dối nhỏ, từng suy nghĩ bất thiện — chúng tích lũy dần dần như nước nhỏ giọt cuối cùng làm đầy cả chiếc hũ lớn.",
+  },
+  {
+    id: 112,
+    pham: "Phẩm Ác — Kệ 122",
+    ke_ngon: "Chớ khinh điều lành nhỏ,\nNghĩ rằng: 'chưa đến ta'.\nNước nhỏ từng giọt rơi,\nDần đầy cả hũ lớn.",
+    y_nghia: "Ngược lại, đừng xem thường bất kỳ hành động thiện lành nào dù nhỏ. Nụ cười chân thành, lời nói tử tế, ý nghĩ từ bi — từng giọt nhỏ thiện lành tích lũy thành kho báu tâm hồn.",
+  },
+  {
+    id: 113,
+    pham: "Phẩm Ác — Kệ 123",
+    ke_ngon: "Thương nhân nhiều của báu,\nCó ít bạn đồng hành,\nTránh đường có hiểm nguy.\nCũng vậy, ai muốn sống,\nHãy tránh xa điều ác.",
+    y_nghia: "Người thương buôn thông minh không đi con đường nguy hiểm dù nó có vẻ ngắn hơn. Người khôn ngoan cũng vậy — tránh xa điều bất thiện không phải vì sợ hãi mà vì biết rõ hậu quả.",
+  },
+  {
+    id: 114,
+    pham: "Phẩm Ác — Kệ 124",
+    ke_ngon: "Bàn tay không thương tích,\nCó thể cầm thuốc độc.\nĐộc không hại tay lành,\nKhông làm ác, không tội.",
+    y_nghia: "Người không có ác ý — dù sống giữa thế giới đầy nguy hiểm — sẽ không bị tổn hại bởi những thế lực bất thiện. Tâm trong sáng là lớp bảo vệ tốt nhất.",
+  },
+  {
+    id: 115,
+    pham: "Phẩm Ác — Kệ 125",
+    ke_ngon: "Ai hại người không hại,\nHại người thanh tịnh trong;\nÁc quay lại hại người,\nNhư tung bụi ngược gió.",
+    y_nghia: "Kẻ tấn công người vô tội, người trong sáng — như người tung bụi ngược gió. Bụi quay lại phủ đầy mặt kẻ ném. Ác nghiệp gây cho người vô tội cuối cùng quay về người gieo.",
+  },
+  {
+    id: 116,
+    pham: "Phẩm Ác — Kệ 126",
+    ke_ngon: "Một số sanh trong bụng mẹ,\nKẻ ác sanh địa ngục.\nNgười lành lên thiên giới,\nLậu hoặc tận, Niết-bàn.",
+    y_nghia: "Mỗi người tạo ra lộ trình riêng của mình qua hành động và tư duy. Không ai quyết định điểm đến của ta ngoài chính ta — đây vừa là trách nhiệm vừa là tự do lớn nhất.",
+  },
+  {
+    id: 117,
+    pham: "Phẩm Ác — Kệ 127",
+    ke_ngon: "Không trên trời dưới nước,\nKhông vào hang núi sâu,\nKhông có nơi nào trên đời,\nTrốn thoát được ác nghiệp.",
+    y_nghia: "Không có nơi trốn chạy khỏi kết quả hành động của mình. Đây không phải lời đe dọa mà là lời nhắc nhở: hãy sống tử tế ngay từ đầu, vì không ai có thể chạy trốn khỏi chính mình.",
+  },
+  {
+    id: 118,
+    pham: "Phẩm Ác — Kệ 128",
+    ke_ngon: "Không trên trời dưới nước,\nKhông vào hang núi sâu,\nKhông có nơi nào trên đời,\nThần chết không tìm thấy.",
+    y_nghia: "Cái chết không phân biệt — không ai trốn thoát. Nhưng người sống thiện lành đối mặt với cái chết không bằng sợ hãi mà bằng sự bình thản — vì họ không có gì phải hối tiếc.",
+  },
+
+  // ── PHẨM HÌNH PHẠT (129-145) ──
+  {
+    id: 119,
+    pham: "Phẩm Hình Phạt — Kệ 129",
+    ke_ngon: "Mọi người đều sợ chết,\nMọi người đều sợ đau.\nLấy mình làm ví dụ,\nĐừng giết, đừng bảo giết.",
+    y_nghia: "Đặt mình vào vị trí của người khác — mọi chúng sinh đều sợ chết như ta sợ. Khi thật sự hiểu điều này, ta sẽ không thể gây tổn hại cho bất kỳ sinh linh nào.",
+  },
+  {
+    id: 120,
+    pham: "Phẩm Hình Phạt — Kệ 130",
+    ke_ngon: "Mọi người đều sợ chết,\nMọi người đều yêu sống.\nLấy mình làm ví dụ,\nĐừng giết, đừng bảo giết.",
+    y_nghia: "Yêu cầu mình không phán xét người khác chỉ từ vị trí của mình — mà từ vị trí của họ. Khi biết người khác cũng yêu quý mạng sống như ta, từ bi sẽ tự nhiên nảy sinh.",
+  },
+  {
+    id: 121,
+    pham: "Phẩm Hình Phạt — Kệ 131",
+    ke_ngon: "Ai tìm hạnh phúc mình,\nDùng gậy hại chúng sanh\nCũng đang tìm hạnh phúc.\nSẽ không được hạnh phúc,\nĐời sau không hạnh phúc.",
+    y_nghia: "Không có hạnh phúc nào bền vững xây trên nỗi khổ của người khác. Dùng sức mạnh để áp bức người yếu hơn — dù đạt được thứ ta muốn — nhưng trong lòng hạnh phúc ấy đã bị ô nhiễm.",
+  },
+  {
+    id: 122,
+    pham: "Phẩm Hình Phạt — Kệ 132",
+    ke_ngon: "Ai tìm hạnh phúc mình,\nKhông dùng gậy hại người\nCũng đang tìm hạnh phúc.\nSẽ được hạnh phúc đời này,\nVà đời sau hạnh phúc.",
+    y_nghia: "Người tìm hạnh phúc mà không làm tổn hại người khác — đó là người đã hiểu rằng hạnh phúc thật sự không thể đến từ sự áp bức. Họ xây hạnh phúc trên nền tảng vững chắc của từ bi.",
+  },
+  {
+    id: 123,
+    pham: "Phẩm Hình Phạt — Kệ 133",
+    ke_ngon: "Chớ nói lời thô ác,\nNgười nghe sẽ đáp lại.\nKhổ đau thay, lời đáp!\nGậy ông đập lưng ông.",
+    y_nghia: "Lời nói hung hăng, thô lỗ thường tạo ra phản ứng tương tự. Không phải vì người kia xứng đáng bị trả đũa — mà vì năng lượng ta gieo sẽ lan tỏa và cuối cùng quay lại ta.",
+  },
+  {
+    id: 124,
+    pham: "Phẩm Hình Phạt — Kệ 134",
+    ke_ngon: "Như chuông bị sứt mẻ,\nKhông còn ngân tiếng nữa.\nCũng vậy, không tranh cãi,\nĐạt đến Niết-bàn thôi.",
+    y_nghia: "Người đã chứng ngộ không còn cần tranh luận, bảo vệ cái tôi hay cạnh tranh. Như chuông nứt không còn ngân — tâm họ đã lặng yên khỏi những tiếng ồn ào của ego.",
+  },
+  {
+    id: 125,
+    pham: "Phẩm Hình Phạt — Kệ 135",
+    ke_ngon: "Như người chăn bò lùa\nĐàn bò ra đồng cỏ.\nCũng vậy, già và chết\nLùa mạng sống chúng sanh.",
+    y_nghia: "Già và chết không ngừng lùa ta về phía trước, như người chăn bò lùa đàn gia súc. Không ai thoát khỏi quy luật này — điều duy nhất ta có thể chọn là sống như thế nào trên hành trình ấy.",
+  },
+  {
+    id: 126,
+    pham: "Phẩm Hình Phạt — Kệ 136",
+    ke_ngon: "Người ngu không biết mình,\nĐang làm các điều ác.\nBị nghiệp ác thiêu đốt,\nNhư lửa thiêu tự tay.",
+    y_nghia: "Sự thiếu hiểu biết về bản thân — không nhận ra những tập khí ác của mình — dẫn đến khổ đau liên tục. Tự biết mình là điều kiện đầu tiên của sự chuyển hóa.",
+  },
+  {
+    id: 127,
+    pham: "Phẩm Hình Phạt — Kệ 137",
+    ke_ngon: "Ai hại người không ác,\nNgười vô tội, vô nhiễm,\nTội ác ấy trở về\nNhư bụi tung ngược gió.",
+    y_nghia: "Gây hại cho người vô tội là hành động sẽ tạo ra nghiệp ác mạnh nhất. Vì năng lượng ác ấy không có chỗ bám vào người trong sáng — nó ngược trở về tạo họa cho chính kẻ gieo.",
+  },
+  {
+    id: 128,
+    pham: "Phẩm Hình Phạt — Kệ 143",
+    ke_ngon: "Ai biết hổ thẹn trước,\nNhư ngựa hay chịu roi?\nBậc ấy có lòng xấu hổ,\nTinh tấn, không lười biếng.",
+    y_nghia: "Hiri — sự hổ thẹn với điều bất thiện — là một trong những phẩm chất bảo vệ con người. Người biết xấu hổ trước khi làm điều sai là người đang tiến bộ trên con đường tu tập.",
+  },
+  {
+    id: 129,
+    pham: "Phẩm Hình Phạt — Kệ 144",
+    ke_ngon: "Như ngựa giỏi chịu roi,\nHãy tinh tấn, có lòng tin.\nGiới đức, tinh tấn, thiền,\nTrí tuệ, nhận thức đúng.\nVượt khổ lớn không nhỏ.",
+    y_nghia: "Năm phẩm chất — giới đức, tinh tấn, thiền định, trí tuệ và nhận thức đúng đắn — là bộ công cụ hoàn chỉnh để vượt qua khổ đau. Không phải một mà tất cả năm cần được tu tập đồng bộ.",
+  },
+  {
+    id: 130,
+    pham: "Phẩm Hình Phạt — Kệ 145",
+    ke_ngon: "Người trị thủy dẫn nước,\nThợ làm tên, nắn tên,\nThợ mộc uốn gỗ thẳng;\nBậc trí điều phục mình.",
+    y_nghia: "Mỗi nghề đều cần sự chế tác khéo léo vật liệu của mình. Người tu tập cũng vậy — vật liệu của họ chính là tâm mình. Không ai có thể điều phục tâm ta thay cho ta.",
+  },
+
+  // ── PHẨM GIÀ (146-156) ──
+  {
+    id: 131,
+    pham: "Phẩm Già — Kệ 146",
+    ke_ngon: "Sao cười, sao vui hỷ?\nKhi đời mãi bừng cháy.\nChìm trong tối tăm mù,\nSao không tìm ánh sáng?",
+    y_nghia: "Thế giới đang bốc lửa với tham, sân và si — mà ta vẫn cười đùa như không có gì. Đây là lời kêu gọi thức tỉnh: hãy thấy thực trạng của cuộc đời và tìm ánh sáng trí tuệ.",
+  },
+  {
+    id: 132,
+    pham: "Phẩm Già — Kệ 147",
+    ke_ngon: "Hãy nhìn thân trang sức,\nĐống thương tích, chắp vá.\nĐau yếu, đầy ưu não,\nKhông bền, không an trú.",
+    y_nghia: "Thân xác ta — dù được chăm chút, trang điểm — vẫn chỉ là tập hợp các bộ phận tạm thời, dễ hư hoại. Nhìn thấy điều này không để bi quan mà để không quá dính mắc vào hình thức bên ngoài.",
+  },
+  {
+    id: 133,
+    pham: "Phẩm Già — Kệ 148",
+    ke_ngon: "Thân này già yếu rồi,\nỔ bệnh, hoại tan dần.\nĐống hôi thối nhơ nhớp,\nKết thúc là cái chết.",
+    y_nghia: "Nhìn thẳng vào bản chất của thân xác — không phải để ghê tởm nó mà để không bị nô lệ vào nó. Người hiểu bản chất thân xác sẽ không dành cả đời tô vẽ, gìn giữ cái tạm thời.",
+  },
+  {
+    id: 134,
+    pham: "Phẩm Già — Kệ 149",
+    ke_ngon: "Những xương trắng như quả bầu,\nBị liệng sau mùa thu.\nThấy chúng sao còn thích,\nThích thú điều gì đây?",
+    y_nghia: "Một thiền quán sâu sắc về vô thường của thân xác. Không phải để gây ra nỗi sợ hãi — mà để tạo ra sự buông bỏ tự nhiên và chuyển hướng ta đến những giá trị bền vững hơn.",
+  },
+  {
+    id: 135,
+    pham: "Phẩm Già — Kệ 150",
+    ke_ngon: "Thành này bằng xương cốt,\nĐắp bằng thịt và máu.\nGià, chết được tàng giữ,\nCùng với mạn và lừa dối.",
+    y_nghia: "Thân xác là 'thành trì' tạm bợ — được xây từ những yếu tố phân hủy. Bên trong còn chứa đựng ngã mạn và lừa dối. Hiểu điều này giúp ta không đặt quá nhiều vốn liếng vào hình thức bên ngoài.",
+  },
+  {
+    id: 136,
+    pham: "Phẩm Già — Kệ 151",
+    ke_ngon: "Xe vua được trang hoàng,\nCũng sẽ già hư hoại.\nThân người cũng già hoại.\nChỉ Pháp người thiện không già.",
+    y_nghia: "Mọi thứ vật chất — dù tráng lệ như xe vua — đều già nua và hư hoại. Chỉ có Chánh Pháp — những phẩm chất nội tâm được tu dưỡng — là thứ không bị thời gian xói mòn.",
+  },
+  {
+    id: 137,
+    pham: "Phẩm Già — Kệ 152",
+    ke_ngon: "Người ít học như bò,\nTăng trưởng thịt không trí.\nSống đời ấy vô ích.",
+    y_nghia: "Người sống cả đời chỉ chăm lo cho thân xác — ăn ngon, mặc đẹp, tiêu khiển — mà không nuôi dưỡng trí tuệ và tâm hồn, thì tăng trưởng nhưng không trưởng thành.",
+  },
+  {
+    id: 138,
+    pham: "Phẩm Già — Kệ 153",
+    ke_ngon: "Lang thang bao kiếp sống,\nTa tìm nhưng chẳng gặp,\nKẻ xây dựng ngôi nhà.\nKhổ thay, đời tái sanh!",
+    y_nghia: "Đây là lời Đức Phật thốt lên khi chứng ngộ dưới cội Bồ Đề. 'Ngôi nhà' ám chỉ bản ngã, 'người thợ xây' là tham ái. Khi thấy rõ gốc rễ khổ đau, vòng luân hồi mới được cởi bỏ.",
+  },
+  {
+    id: 139,
+    pham: "Phẩm Già — Kệ 154",
+    ke_ngon: "Hỡi người xây nhà kia,\nNay được thấy ngươi rồi!\nNgươi không xây nhà nữa,\nĐòn tay ngươi bị gãy.\nNóc nhà ngươi bị phá,\nTâm đạt đến vô vi,\nTham ái đã đoạn tận.",
+    y_nghia: "Khi giác ngộ, tham ái — người thợ xây vô tận của bản ngã — bị lộ mặt và mất sức mạnh. Không còn nguyên liệu để xây dựng thêm, vòng luân hồi dừng lại. Đây là tự do viên mãn.",
+  },
+  {
+    id: 140,
+    pham: "Phẩm Già — Kệ 155",
+    ke_ngon: "Không tu tịnh hạnh trẻ,\nKhông kiếm của khi trẻ.\nNhư cò già hồ cạn,\nSầu não đứng chờ đợi.",
+    y_nghia: "Tuổi trẻ qua đi không trở lại. Người không tu tập lúc trẻ — không xây dựng nội tâm vững chắc, không tích lũy thiện nghiệp — sẽ đến tuổi già với đôi tay trắng về tâm linh.",
+  },
+
+  // ── PHẨM TỰ NGÃ (157-166) ──
+  {
+    id: 141,
+    pham: "Phẩm Tự Ngã — Kệ 157",
+    ke_ngon: "Nếu người biết yêu mình,\nHãy khéo hộ trì mình.\nBậc trí hộ trì mình,\nTrong ba canh tỉnh thức.",
+    y_nghia: "Yêu thương bản thân thật sự không phải nuông chiều mà là bảo vệ mình khỏi những điều có hại. Người thực sự yêu bản thân sẽ tỉnh thức giữ mình khỏi tham, sân và si.",
+  },
+  {
+    id: 142,
+    pham: "Phẩm Tự Ngã — Kệ 158",
+    ke_ngon: "Trước tiên hãy tự mình,\nĐứng vững trên chánh đạo.\nSau đó mới dạy người.\nBậc trí không ô nhiễm.",
+    y_nghia: "Không thể cho người khác thứ mình không có. Trước khi chỉ dạy người khác, hãy tự thực hành trước. Gương sáng hành động có sức mạnh hơn ngàn lời khuyên nhủ.",
+  },
+  {
+    id: 143,
+    pham: "Phẩm Tự Ngã — Kệ 159",
+    ke_ngon: "Hãy tự làm như vậy,\nNhư mình dạy người khác.\nKhéo tự điều phục rồi,\nHãy điều phục người khác.\nThật khó là tự ngã.",
+    y_nghia: "Điều khó nhất trên đời không phải chinh phục núi cao hay biển rộng — mà là chinh phục chính mình. Hãy áp dụng cho bản thân ít nhất những gì ta kỳ vọng ở người khác.",
+  },
+  {
+    id: 144,
+    pham: "Phẩm Tự Ngã — Kệ 160",
+    ke_ngon: "Tự mình làm chỗ nương,\nNào ai nương được ai?\nTự mình điều phục khéo,\nĐược chỗ nương khó tìm.",
+    y_nghia: "Đây là giáo lý tự lực cốt lõi của Phật giáo. Không ai có thể giải thoát ta thay ta. Nương tựa vào bản thân đã được tu tập chính là nương tựa vững chắc nhất.",
+  },
+  {
+    id: 145,
+    pham: "Phẩm Tự Ngã — Kệ 161",
+    ke_ngon: "Ác do tự mình làm,\nTự mình sanh, tự trợ.\nNghiền nát kẻ ngu si,\nNhư kim cương nghiền đá.",
+    y_nghia: "Ác nghiệp không ai gieo cho ta — ta tự gieo và tự gặt. Sức mạnh tàn phá của ác nghiệp với người ngu si cũng mạnh như kim cương nghiền đá — không thể cưỡng lại.",
+  },
+  {
+    id: 146,
+    pham: "Phẩm Tự Ngã — Kệ 162",
+    ke_ngon: "Ai nhiều ác hạnh,\nNhư dây leo siết cây,\nHại mình như ma làm,\nTheo ý kẻ thù muốn.",
+    y_nghia: "Người tạo nhiều ác nghiệp đang tự trói mình như dây leo siết chặt cây — mỗi ngày siết thêm một vòng. Kẻ thù lớn nhất của ta chính là những hành động bất thiện của chính mình.",
+  },
+  {
+    id: 147,
+    pham: "Phẩm Tự Ngã — Kệ 163",
+    ke_ngon: "Tự làm điều hại mình,\nDễ làm và dễ gặp.\nĐiều lợi, điều tốt đẹp —\nKhó làm và khó gặp.",
+    y_nghia: "Điều dễ dàng nhất thường không phải điều tốt nhất cho ta. Hành động bất thiện thường dễ dàng hơn; điều thiện đòi hỏi nỗ lực. Đây là lý do tu tập quan trọng — để cái khó trở thành tự nhiên.",
+  },
+  {
+    id: 148,
+    pham: "Phẩm Tự Ngã — Kệ 164",
+    ke_ngon: "Ai hủy báng bậc trí,\nA-la-hán giới luật;\nKẻ ác kiến ấy đó,\nSẽ tự gây hại mình.",
+    y_nghia: "Phỉ báng người có đức hạnh — những người đang thực sự tu tập — là hành động tự gây hại cho mình. Không phải vì người trí sẽ trả thù, mà vì ta tự đóng cửa với sự học hỏi và chuyển hóa.",
+  },
+  {
+    id: 149,
+    pham: "Phẩm Tự Ngã — Kệ 165",
+    ke_ngon: "Ác do chính mình làm,\nÔ nhiễm từ chính mình.\nDo mình không làm ác,\nThanh tịnh từ chính mình.",
+    y_nghia: "Không ai làm ta ô nhiễm và cũng không ai làm ta thanh tịnh — tất cả đều đến từ chính ta. Đây vừa là thách thức vừa là niềm hy vọng: vì ta có thể thay đổi chính mình.",
+  },
+  {
+    id: 150,
+    pham: "Phẩm Tự Ngã — Kệ 166",
+    ke_ngon: "Tự lợi mình nhiều lắm,\nChớ bỏ vì lợi người.\nBiết rõ tự lợi mình,\nHãy theo đúng mục tiêu.",
+    y_nghia: "Đây không phải lời khuyến khích ích kỷ. 'Tự lợi' ở đây là lợi ích tâm linh — sự giải thoát, sự tu tập. Hãy ưu tiên việc chăm sóc tâm hồn mình, vì chỉ khi tự lành mạnh ta mới thực sự giúp được người khác.",
+  },
+
+  // ── PHẨM THẾ GIỚI (167-178) ──
+  {
+    id: 151,
+    pham: "Phẩm Thế Giới — Kệ 167",
+    ke_ngon: "Chớ theo pháp hạ liệt,\nChớ sống theo phóng dật.\nChớ theo tà kiến uế,\nChớ tăng trưởng thế gian.",
+    y_nghia: "Bốn điều cần tránh: pháp hạ liệt (tập khí thấp kém), phóng dật (thiếu chánh niệm), tà kiến (nhận thức sai lầm) và tăng trưởng thế gian (dính mắc vào lợi danh). Đây là bản đồ để không đi lạc.",
+  },
+  {
+    id: 152,
+    pham: "Phẩm Thế Giới — Kệ 168",
+    ke_ngon: "Hãy đứng dậy, chú tâm,\nSống theo Chánh Pháp tốt.\nAi sống theo Chánh Pháp,\nSẽ sung sướng đời này và đời sau.",
+    y_nghia: "Đứng dậy — không bị nhấn chìm bởi lười biếng và thụ động. Sống theo Chánh Pháp không phải lý tưởng xa vời mà là con đường thiết thực mang lại an lạc ngay trong đời này.",
+  },
+  {
+    id: 153,
+    pham: "Phẩm Thế Giới — Kệ 169",
+    ke_ngon: "Sống theo Chánh Pháp tốt,\nChớ sống phi Chánh Pháp.\nAi sống theo Chánh Pháp,\nSẽ sung sướng đời này và đời sau.",
+    y_nghia: "Sự lặp lại nhấn mạnh: Chánh Pháp không chỉ là điều tốt để theo — mà là con đường duy nhất dẫn đến hạnh phúc thực sự và bền vững, không chỉ tạm thời.",
+  },
+  {
+    id: 154,
+    pham: "Phẩm Thế Giới — Kệ 170",
+    ke_ngon: "Hãy nhìn thế giới này,\nNhư vua xe trang sức,\nKẻ ngu đắm chìm đó,\nKẻ trí không dính vào.",
+    y_nghia: "Thế giới hào nhoáng, bắt mắt như xe vua trang sức — thu hút người thiếu trí tuệ. Người trí biết nhìn xuyên qua vẻ bề ngoài, thấy bản chất vô thường, và không bị cuốn vào.",
+  },
+  {
+    id: 155,
+    pham: "Phẩm Thế Giới — Kệ 171",
+    ke_ngon: "Ai trước phóng dật sống,\nSau không phóng dật nữa;\nNgười ấy sáng thế giới,\nNhư trăng thoát mây che.",
+    y_nghia: "Không bao giờ là quá trễ để thức tỉnh. Người từng sống phóng dật mà nay quay về chánh niệm — sẽ tỏa sáng như trăng thoát khỏi lớp mây che. Sự chuyển hóa luôn còn khả năng.",
+  },
+  {
+    id: 156,
+    pham: "Phẩm Thế Giới — Kệ 172",
+    ke_ngon: "Người trước sống phóng dật,\nSau không sống phóng dật;\nSáng thế giới như đèn,\nChói sáng không mây che.",
+    y_nghia: "Dù quá khứ có thế nào — khi hiện tại ta chọn tỉnh thức — ta trở thành ánh sáng. Không có quá khứ tối nào có thể giữ ta mãi trong bóng tối nếu ta chọn thắp sáng ngay lúc này.",
+  },
+  {
+    id: 157,
+    pham: "Phẩm Thế Giới — Kệ 173",
+    ke_ngon: "Ai dùng điều lành thay,\nCho điều ác đã làm;\nSáng thế giới như đèn,\nChói sáng không mây che.",
+    y_nghia: "Người thay ác bằng thiện — không phải chỉ nói mà là thực sự hành động — sẽ dần dần xóa bỏ bóng tối trong tâm mình. Đây là ý nghĩa sâu sắc của sự sám hối và chuyển hóa.",
+  },
+  {
+    id: 158,
+    pham: "Phẩm Thế Giới — Kệ 174",
+    ke_ngon: "Thế giới này mù lòa,\nÍt người thấy rõ ràng.\nNhư chim thoát khỏi lưới,\nÍt người lên trời cao.",
+    y_nghia: "Vô minh che khuất mắt đa số — không phải vì họ kém cỏi mà vì chưa có cơ duyên gặp Chánh Pháp và thực hành. Người thoát khỏi vô minh như chim bay khỏi lưới — quý hiếm và đáng trân trọng.",
+  },
+  {
+    id: 159,
+    pham: "Phẩm Thế Giới — Kệ 175",
+    ke_ngon: "Thiên nga bay đường mặt trời,\nNgười thần thông phi hành,\nBậc trí vượt thế gian,\nPhá quân đội Ác ma.",
+    y_nghia: "Thiên nga bay trên không trung, người thần thông bay qua hư không — nhưng vĩ đại nhất là người trí vượt qua thế gian bằng trí tuệ và từ bi, chinh phục những thế lực tối tăm bên trong.",
+  },
+  {
+    id: 160,
+    pham: "Phẩm Thế Giới — Kệ 176",
+    ke_ngon: "Với người nói dối mãi,\nVượt qua thế giới một rồi;\nKhông ác nào họ không làm,\nAi người không thực hành.",
+    y_nghia: "Người đã từ bỏ sự thật là đã từ bỏ mọi giá trị. Khi không còn điểm tham chiếu của sự thật — không ác hạnh nào còn ngăn họ được. Trung thực không chỉ là đức hạnh — mà là nền tảng của tất cả đức hạnh.",
+  },
+  {
+    id: 161,
+    pham: "Phẩm Thế Giới — Kệ 177",
+    ke_ngon: "Kẻ tham không lên trời,\nKẻ ngu không thích bố thí.\nBậc trí hoan hỷ thí,\nĐời sau được an lạc.",
+    y_nghia: "Sự bố thí — cho đi một cách vô điều kiện — là hành động chống lại bản năng tích trữ. Người trí hiểu rằng cho đi là một trong những con đường nhanh nhất dẫn đến tự do nội tâm.",
+  },
+  {
+    id: 162,
+    pham: "Phẩm Thế Giới — Kệ 178",
+    ke_ngon: "Hơn là làm vua đời,\nHơn là lên thiên giới,\nHơn là chủ thế gian —\nQuả bước đầu Dự lưu.",
+    y_nghia: "Sự giác ngộ đầu tiên — Dự lưu — vượt trên mọi địa vị thế gian. Vì đây là bước đầu tiên ra khỏi vòng luân hồi, bước đầu tiên đến tự do thật sự.",
+  },
+
+  // ── PHẨM PHẬT ĐÀ (179-196) ──
+  {
+    id: 163,
+    pham: "Phẩm Phật Đà — Kệ 179",
+    ke_ngon: "Thắng lợi không bị thắng,\nThắng lợi của vị ấy;\nKhông ai theo dấu vết,\nThắng lợi vô bờ bến.",
+    y_nghia: "Chiến thắng giác ngộ của Đức Phật là chiến thắng không ai có thể xóa bỏ — không phải chiến thắng trên chiến trường mà là chiến thắng tham, sân, si, không ai lấy đi được.",
+  },
+  {
+    id: 164,
+    pham: "Phẩm Phật Đà — Kệ 180",
+    ke_ngon: "Tham ái không lưới bẫy,\nKhông đầm phá dẫn Ngài,\nVà Ngài đi đường ấy —\nTheo vết chân nào Ngài?",
+    y_nghia: "Đức Phật đã thoát khỏi mọi tham ái — không còn vết tích nào của tham, sân, si. Không ai có thể dò theo dấu chân của người đã giải thoát hoàn toàn.",
+  },
+  {
+    id: 165,
+    pham: "Phẩm Phật Đà — Kệ 181",
+    ke_ngon: "Thiền định, tinh tấn mạnh,\nThiền duyệt khéo ưa thích.\nBậc trí, giác ngộ thật,\nĐược chư thiên ái kính.",
+    y_nghia: "Người tu tập thiền định với tinh tấn thực sự — không phải thiền cho có — sẽ được cả trời người kính trọng. Không phải vì tìm kiếm sự kính trọng mà vì phẩm chất đức hạnh tự nhiên tỏa ra.",
+  },
+  {
+    id: 166,
+    pham: "Phẩm Phật Đà — Kệ 182",
+    ke_ngon: "Người sanh được thật khó,\nChết được mạng sống khó,\nNghe Chánh Pháp rất khó,\nPhật ra đời rất khó.",
+    y_nghia: "Bốn điều hiếm có: được sinh làm người, được sống đến khi nghe Pháp, được nghe Chánh Pháp, và có Phật xuất hiện. Nếu ta đang đọc những lời này — ta đã có được ít nhất hai trong bốn điều hiếm ấy.",
+  },
+  {
+    id: 167,
+    pham: "Phẩm Đạo — Kệ 183",
+    ke_ngon: "Không làm mọi điều ác,\nThành tựu các hạnh lành,\nTâm ý giữ trong sạch:\nChính lời chư Phật dạy.",
+    y_nghia: "Đây là cốt lõi giáo lý của mọi vị Phật: lánh dữ, làm lành, và thanh lọc tâm. Ba điều này tuy giản dị nhưng là cả con đường giải thoát — không thừa, không thiếu.",
+  },
+  {
+    id: 168,
+    pham: "Phẩm Phật Đà — Kệ 184",
+    ke_ngon: "Nhẫn nhục là khổ hạnh tối cao,\nNiết-bàn cao nhất — Phật dạy.\nKẻ xuất gia hại người —\nKhông phải Sa-môn, Bà-la-môn.",
+    y_nghia: "Nhẫn nhục không phải yếu đuối mà là sức mạnh cao nhất — sức mạnh không bị kích động. Và người tu hành mà còn gây hại cho người khác — dù mang danh hiệu gì — đã đánh mất bản chất tu hành thật sự.",
+  },
+  {
+    id: 169,
+    pham: "Phẩm Phật Đà — Kệ 185",
+    ke_ngon: "Không khinh bai, không hại người,\nTheo Giới luật, ăn uống tiết độ,\nChỗ ngồi nằm xa vắng,\nTu tập tăng thượng tâm:\nĐây là lời Phật dạy.",
+    y_nghia: "Năm điều cốt lõi trong đời sống tu hành: không khinh người, không hại người, giữ giới, tiết độ trong ăn uống, và tu tập thiền định. Đây là bản tóm tắt hoàn chỉnh của đời sống tu tập thực tiễn.",
+  },
+  {
+    id: 170,
+    pham: "Phẩm Phật Đà — Kệ 186",
+    ke_ngon: "Vàng mưa xuống như mưa,\nKhông thỏa mãn dục vọng.\nKẻ trí biết: 'Dục vui ít,\nKhổ đau thực sự nhiều.'",
+    y_nghia: "Dù vàng mưa xuống như trời mưa, tham dục vẫn không thỏa mãn — vì bản chất của tham là không bao giờ đủ. Người trí nhìn thấy tỷ lệ thực sự: niềm vui từ dục vui ít, khổ đau đến từ nó nhiều.",
+  },
+  {
+    id: 171,
+    pham: "Phẩm Phật Đà — Kệ 187",
+    ke_ngon: "Như vậy bậc đệ tử,\nKhông vui trong dục lạc,\nDù là dục cõi trời.\nKhoái lạc ái diệt tận.",
+    y_nghia: "Người đệ tử thực sự không còn tìm kiếm dục lạc — dù là những thú vui tao nhã nhất. Họ đã nếm được hương vị của tự do, và tự do ấy ngọt ngào hơn bất kỳ dục lạc nào.",
+  },
+  {
+    id: 172,
+    pham: "Phẩm Phật Đà — Kệ 188",
+    ke_ngon: "Người sợ hãi chạy đến\nNúi, rừng, vườn, cây, đền.\nChỗ nương ấy không thật,\nNơi nương ấy không cao.",
+    y_nghia: "Khi sợ hãi, người ta tìm nơi ẩn trú trong núi rừng, đền miếu. Nhưng những nơi đó không mang lại sự bình an thật sự vì chúng không giải quyết gốc rễ của nỗi sợ bên trong.",
+  },
+  {
+    id: 173,
+    pham: "Phẩm Phật Đà — Kệ 189",
+    ke_ngon: "Ai quy y Phật Pháp Tăng,\nDùng trí tuệ thấy Tứ Đế:\nKhổ, Khổ tập, Khổ diệt,\nVà Bát Thánh đạo thoát khổ.",
+    y_nghia: "Quy y Tam Bảo thực sự là hiểu và thực hành Tứ Diệu Đế: nhận ra khổ, thấy nguyên nhân của khổ, biết rằng khổ có thể chấm dứt, và đi theo con đường thoát khổ.",
+  },
+  {
+    id: 174,
+    pham: "Phẩm Phật Đà — Kệ 190",
+    ke_ngon: "Đây chỗ nương an ổn,\nĐây chỗ nương tối thượng;\nQuy y chỗ nương này,\nThoát mọi khổ đau sầu.",
+    y_nghia: "Tam Bảo — Phật, Pháp, Tăng — không phải nương tựa thụ động mà là nương tựa vào sự giác ngộ, vào Chánh Pháp và vào cộng đồng tu tập. Đây là nơi nương tựa thực sự dẫn đến giải thoát.",
+  },
+
+  // ── PHẨM AN LẠC (197-208) ──
+  {
+    id: 175,
+    pham: "Phẩm An Lạc — Kệ 197",
+    ke_ngon: "Hạnh phúc thay, chúng ta sống,\nKhông thù, giữa các thù hận!\nGiữa những người thù hận,\nTa sống không thù hận.",
+    y_nghia: "Không phải vắng mặt kẻ thù mà tạo ra bình yên — mà là tâm không mang thù hận. Sống giữa thế giới đầy xung đột với trái tim không hận thù là bài học cao quý nhất của từ bi.",
+  },
+  {
+    id: 176,
+    pham: "Phẩm An Lạc — Kệ 198",
+    ke_ngon: "Hạnh phúc thay, chúng ta sống,\nKhỏe mạnh giữa bệnh hoạn!\nGiữa những người bệnh hoạn,\nTa sống không bệnh hoạn.",
+    y_nghia: "Sức khỏe tâm hồn không phụ thuộc vào sức khỏe thân xác. Người có tâm trong sáng và bình an — dù thân xác có đau yếu — vẫn 'khỏe mạnh' theo nghĩa sâu xa nhất.",
+  },
+  {
+    id: 177,
+    pham: "Phẩm An Lạc — Kệ 199",
+    ke_ngon: "Hạnh phúc thay, chúng ta sống,\nKhông ưu, giữa sầu não!\nGiữa những người ưu não,\nTa sống không ưu não.",
+    y_nghia: "Chánh niệm và tu tập không loại bỏ những thăng trầm của cuộc đời — nhưng tạo ra không gian bên trong để ta không bị nhấn chìm bởi chúng. Đây là sự bình an không bị điều kiện hóa.",
+  },
+  {
+    id: 178,
+    pham: "Phẩm An Lạc — Kệ 200",
+    ke_ngon: "Hạnh phúc thay, chúng ta sống,\nTa không có gì hết;\nTa sẽ hưởng hỷ lạc,\nNhư chư Thiên Quang Âm.",
+    y_nghia: "Người đã buông bỏ tất cả dính mắc — không phải nghèo khổ mà là tự do — sẽ hưởng niềm vui thuần khiết nhất. Tự do khỏi 'sở hữu' mang lại sự phong phú nội tâm mà của cải không mua được.",
+  },
+  {
+    id: 179,
+    pham: "Phẩm An Lạc — Kệ 201",
+    ke_ngon: "Chiến thắng gây thù oán,\nBại trận chịu khổ đau.\nAi bỏ thắng bỏ bại,\nTịch tịnh hưởng an lạc.",
+    y_nghia: "Người luôn muốn thắng sẽ tạo ra kẻ thù không ngừng. Người chấp nhận thua sẽ khổ sở. Chỉ người vượt qua cả hai — không cần thắng, không sợ thua — mới thực sự tự do.",
+  },
+  {
+    id: 180,
+    pham: "Phẩm An Lạc — Kệ 202",
+    ke_ngon: "Không lửa nào sánh lửa tham;\nKhông ác nào sánh sân hận;\nKhông khổ nào sánh uẩn khổ;\nKhông lạc nào sánh tịch tịnh.",
+    y_nghia: "Bốn sự thật về ngọn lửa và sự bình an: Tham là lửa đốt mạnh nhất, sân hận là ác lớn nhất, khổ thân-tâm là khổ nặng nhất, và Niết-bàn là lạc tối thượng. Mọi so sánh đều nghiêng về phía tu tập.",
+  },
+  {
+    id: 181,
+    pham: "Phẩm An Lạc — Kệ 203",
+    ke_ngon: "Đói là bệnh lớn nhất,\nHành uẩn là khổ nhất.\nAi thấy đây như thật,\nNiết-bàn là lạc nhất.",
+    y_nghia: "Đói là ví dụ cụ thể nhất về khổ thân xác. Nhưng khổ lớn hơn là khổ của 'hành uẩn' — sự liên tục chạy theo ý muốn và phản ứng. Thoát khỏi sự chạy đuổi ấy là hạnh phúc lớn nhất.",
+  },
+  {
+    id: 182,
+    pham: "Phẩm An Lạc — Kệ 204",
+    ke_ngon: "Sức khỏe là lợi lớn nhất,\nThanh thản là tài sản nhất,\nTin tưởng là bạn thân nhất,\nNiết-bàn là lạc tối thượng.",
+    y_nghia: "Bốn điều quý nhất: sức khỏe của thân, thanh thản của tâm, tín tâm trong tu tập, và Niết-bàn như đích đến. Trong bốn điều này, sức khỏe và thanh thản là những thứ ta có thể chăm sóc ngay hôm nay.",
+  },
+  {
+    id: 183,
+    pham: "Phẩm An Lạc — Kệ 205",
+    ke_ngon: "Ai uống vị ly độc,\nĐược an tịnh tâm hồn;\nVị thức ăn Pháp lạc;\nKhông ác, không não loạn.",
+    y_nghia: "Người đã nếm được hương vị của Chánh Pháp — sự bình an, trong sáng và tự do — sẽ không còn bị cám dỗ bởi những thú vui ngắn ngủi của thế gian. Đó là vị ngọt không thứ gì sánh bằng.",
+  },
+  {
+    id: 184,
+    pham: "Phẩm An Lạc — Kệ 206",
+    ke_ngon: "Thấy bậc thánh là lành,\nGần bậc thánh là vui.\nKhông thấy kẻ ngu là sướng,\nĐời thường an lạc mãi.",
+    y_nghia: "Được gặp gỡ, học hỏi từ người có trí tuệ và đức hạnh là phước lành lớn. Và tránh xa những người kéo ta vào những tập khí bất thiện cũng là điều bảo vệ ta không kém.",
+  },
+  {
+    id: 185,
+    pham: "Phẩm An Lạc — Kệ 207",
+    ke_ngon: "Đi với kẻ ngu sống,\nLâu ngày sanh sầu não.\nGần kẻ ngu như vậy,\nNhư sống chung kẻ thù.",
+    y_nghia: "Sống lâu với những người kéo ta vào phóng dật và bất thiện — dù họ không có ác ý — cũng dần dần tạo ra khổ đau. Môi trường ta chọn sống trong đó sẽ định hình ta theo thời gian.",
+  },
+  {
+    id: 186,
+    pham: "Phẩm An Lạc — Kệ 208",
+    ke_ngon: "Hãy đi với người trí,\nSáng suốt, học rộng nhiều,\nChánh trực và trì giới.\nĐi theo bậc hiền trí,\nNhư trăng theo đường sao.",
+    y_nghia: "Người ta nên đi theo bậc trí tuệ, học rộng, chánh trực và có giới đức — như mặt trăng theo quỹ đạo của các ngôi sao. Đây không phải mù quáng tuân theo mà là thông minh chọn lựa người dẫn đường.",
+  },
+
+  // ── PHẨM ÁI DỤC (209-220) ──
+  {
+    id: 187,
+    pham: "Phẩm Ái Dục — Kệ 209",
+    ke_ngon: "Ai chuyên tâm pháp khác,\nBỏ bê điều nên làm;\nBỏ lợi, bám vào lợi,\nSẽ ganh tị lẫn nhau.",
+    y_nghia: "Khi ta xao lãng những gì thực sự quan trọng — tu tập, giữ giới, phát triển tâm — để chạy theo những thứ ít giá trị hơn, sự so sánh và ganh tị sẽ nảy sinh như cỏ dại.",
+  },
+  {
+    id: 188,
+    pham: "Phẩm Ái Dục — Kệ 210",
+    ke_ngon: "Chớ thân với ái luyến,\nChớ thân với không ái.\nKhông thấy ái, là khổ.\nThấy không ái cũng khổ.",
+    y_nghia: "Nghịch lý của ái dục: gặp được điều ta yêu quý sẽ khổ vì sợ mất; gặp điều ta ghét cũng khổ vì muốn thoát. Con đường thoát khỏi cả hai là không dính mắc vào một cực nào.",
+  },
+  {
+    id: 189,
+    pham: "Phẩm Ái Dục — Kệ 211",
+    ke_ngon: "Từ ái sanh sầu muộn,\nTừ ái sanh lo sợ.\nAi thoát khỏi ái luyến,\nKhông sầu, đâu có sợ.",
+    y_nghia: "Mọi nỗi buồn đều có gốc rễ trong sự mất mát những gì ta yêu quý. Mọi nỗi sợ đều có gốc rễ trong khả năng mất điều ta muốn giữ. Buông bỏ không phải hờ hững — mà là yêu mà không nắm giữ.",
+  },
+  {
+    id: 190,
+    pham: "Phẩm Ái Dục — Kệ 212",
+    ke_ngon: "Từ hỷ sanh sầu muộn,\nTừ hỷ sanh lo sợ.\nAi thoát khỏi hỷ ái,\nKhông sầu, đâu có sợ.",
+    y_nghia: "Ngay cả niềm vui — nếu ta dính mắc vào nó — cũng trở thành nguồn gốc của khổ đau khi nó qua đi. Hãy tận hưởng niềm vui nhưng không nắm chặt, như cầm hoa mà không bóp nát.",
+  },
+  {
+    id: 191,
+    pham: "Phẩm Ái Dục — Kệ 213",
+    ke_ngon: "Từ khoái lạc sanh sầu,\nTừ khoái lạc sanh sợ.\nAi thoát khoái lạc ái,\nKhông sầu, đâu có sợ.",
+    y_nghia: "Khoái lạc giác quan có giới hạn và vô thường. Tìm kiếm hạnh phúc qua khoái lạc là đổ nước vào chiếc bình không đáy. Người hiểu điều này sẽ tìm kiếm hạnh phúc ở một chiều sâu khác.",
+  },
+  {
+    id: 192,
+    pham: "Phẩm Ái Dục — Kệ 214",
+    ke_ngon: "Từ ái dục sinh ưu,\nTừ ái dục sinh sợ.\nAi giải thoát ái dục,\nKhông ưu, đâu có sợ.",
+    y_nghia: "Mọi nỗi lo âu và sợ hãi đều bắt nguồn từ sự dính mắc. Buông bỏ không có nghĩa là hờ hững — mà là yêu thương với trái tim rộng mở, không nắm giữ.",
+  },
+
+  // ── PHẨM TỲ KHEO (360-382) ──
+  {
+    id: 193,
+    pham: "Phẩm Tỳ Kheo — Kệ 360",
+    ke_ngon: "Chế ngự từ con mắt là lành.\nChế ngự từ tai là lành.\nChế ngự từ mũi là lành.\nChế ngự từ lưỡi là lành.",
+    y_nghia: "Sáu căn — mắt, tai, mũi, lưỡi, thân và ý — là sáu cửa ngõ mà thế giới bên ngoài tiếp xúc tâm ta. Chế ngự không có nghĩa là đóng bít chúng mà là không để cảm giác kéo tâm vào phản ứng tự động.",
+  },
+  {
+    id: 194,
+    pham: "Phẩm Tỳ Kheo — Kệ 361",
+    ke_ngon: "Chế ngự từ thân là lành.\nChế ngự từ lời là lành.\nChế ngự từ ý là lành.\nChế ngự mọi phía là lành.",
+    y_nghia: "Giới hạnh bắt đầu từ việc chế ngự ba nghiệp: thân (hành động), khẩu (lời nói) và ý (suy nghĩ). Khi cả ba được kiểm soát bởi trí tuệ chứ không phải phản ứng — đó là người sống trong giới.",
+  },
+  {
+    id: 195,
+    pham: "Phẩm Tỳ Kheo — Kệ 362",
+    ke_ngon: "Ai nhiếp phục được tay,\nAi nhiếp phục được chân,\nAi nhiếp phục được lời,\nVị tối thượng tự chế.",
+    y_nghia: "Giới luật bắt đầu từ ba cửa: thân (tay, chân), khẩu (lời nói), và cuối cùng là ý (tâm). Người tự chủ được cả ba là bậc cao thượng, dù không mang danh hiệu hay địa vị gì.",
+  },
+  {
+    id: 196,
+    pham: "Phẩm Tỳ Kheo — Kệ 363",
+    ke_ngon: "Tỳ kheo vui lời Phật,\nTịnh tín, tâm hoan hỷ;\nĐạt được pháp tịch diệt,\nHành hành an tịnh lạc.",
+    y_nghia: "Niềm vui trong Chánh Pháp không phải niềm vui nhạt nhẽo — mà là sự hoan hỷ sâu sắc của người đang đi đúng hướng. Người tìm thấy niềm vui trong tu tập sẽ tiến bộ nhanh hơn nhiều.",
+  },
+  {
+    id: 197,
+    pham: "Phẩm Tỳ Kheo — Kệ 368",
+    ke_ngon: "Tỳ kheo từ bi trú,\nTín thành theo Phật Pháp,\nĐạt cảnh giới tịch tịnh,\nHành hành an tịnh lạc.",
+    y_nghia: "Từ bi không phải cảm xúc mà là trạng thái tâm — luôn hướng về sự an lành của người khác. Người sống trong từ bi và niềm tin vào Chánh Pháp đi đến bình an như người bơi xuôi dòng.",
+  },
+  {
+    id: 198,
+    pham: "Phẩm Tỳ Kheo — Kệ 372",
+    ke_ngon: "Không trí tuệ, không thiền,\nKhông thiền, không trí tuệ.\nAi có thiền và trí,\nGần đến bờ Niết-bàn.",
+    y_nghia: "Thiền định và trí tuệ không thể tách rời — cũng như hai cánh của con chim. Thiền định không có trí tuệ dẫn dắt thì mù quáng; trí tuệ không có thiền định làm nền thì phù phiếm.",
+  },
+  {
+    id: 199,
+    pham: "Phẩm Tỳ Kheo — Kệ 374",
+    ke_ngon: "Tỳ kheo nào nhập định,\nTâm tư vắng, không xao;\nVượt thiện pháp thế gian —\nPháp hy hữu, tối thượng.",
+    y_nghia: "Trạng thái thiền định sâu — tâm lặng yên, không xao động — vượt qua mọi thiện pháp bình thường của thế gian. Đây là chiều sâu của tu tập mà không thể đạt được chỉ bằng hành động bên ngoài.",
+  },
+  {
+    id: 200,
     pham: "Phẩm Bà La Môn — Kệ 396",
-    ke_ngon:
-      "Không phải do búi tóc,\nKhông phải do dòng giống,\nKhông phải do sanh chủng:\nLàm Bà La Môn thật.",
-    y_nghia:
-      "Phật dạy rằng giai cấp, dòng tộc, hay ngoại hình không quyết định phẩm giá con người. Chỉ tâm trong sạch, hành động đúng đắn mới thật sự nâng cao phẩm cách — giáo lý bình đẳng vượt thời đại.",
+    ke_ngon: "Không phải do búi tóc,\nKhông phải do dòng giống,\nKhông phải do sanh chủng:\nLàm Bà La Môn thật.",
+    y_nghia: "Phật dạy rằng giai cấp, dòng tộc, hay ngoại hình không quyết định phẩm giá con người. Chỉ tâm trong sạch, hành động đúng đắn mới thật sự nâng cao phẩm cách — giáo lý bình đẳng vượt thời đại.",
+  },
+
+  // ── BỔ SUNG THÊM ──
+  {
+    id: 201,
+    pham: "Phẩm Bà La Môn — Kệ 400",
+    ke_ngon: "Ai không giận, mang gánh,\nVirtuous, không nhiễm ô.\nAi điều phục mình thật,\nĐó tôi gọi Bà-la-môn.",
+    y_nghia: "Người thực sự cao quý là người không bị sân hận kéo đi, có đức hạnh và tâm không bị ô nhiễm. Họ tự điều phục được chính mình — đó là bậc thánh nhân thực sự dù mang danh hiệu gì.",
+  },
+  {
+    id: 202,
+    pham: "Phẩm Bà La Môn — Kệ 406",
+    ke_ngon: "Ai không biết ái luyến,\nKhông biết chỗ ở thân.\nĐã vượt thoát dục lạc,\nĐó tôi gọi Bà-la-môn.",
+    y_nghia: "Người đã buông bỏ hoàn toàn sự dính mắc — không còn nơi chốn cụ thể nào để gọi là 'nhà' của bản ngã, không còn dục lạc nào để chạy đuổi theo — đó là người thực sự tự do.",
+  },
+  {
+    id: 203,
+    pham: "Phẩm Bà La Môn — Kệ 412",
+    ke_ngon: "Ai vượt khỏi thế gian,\nKhông biết bờ trên dưới;\nKhông buộc, không lo sợ:\nĐó tôi gọi Bà-la-môn.",
+    y_nghia: "Người đã vượt qua cả hai thái cực — không bị buộc bởi bất kỳ cực nào của nhị nguyên — không lo sợ vì không có gì để bảo vệ hay mất đi — đó là người thực sự tự do và cao thượng.",
+  },
+  {
+    id: 204,
+    pham: "Phẩm Bà La Môn — Kệ 414",
+    ke_ngon: "Ai thả bỏ trong đời,\nKhông làm hại sinh linh;\nDù nhỏ hay lớn đó:\nĐó tôi gọi Bà-la-môn.",
+    y_nghia: "Tiêu chí đơn giản và sâu sắc nhất: người không gây hại cho bất kỳ sinh linh nào — dù nhỏ bé hay lớn lao — và đã buông bỏ mọi dính mắc. Đó là người cao quý nhất.",
+  },
+  {
+    id: 205,
+    pham: "Phẩm Bà La Môn — Kệ 420",
+    ke_ngon: "Ai biết con đường trước,\nChết và tái sanh đời;\nKhông vướng, đã giác ngộ:\nĐó tôi gọi Bà-la-môn.",
+    y_nghia: "Người có thể nhìn thấy rõ ràng con đường nghiệp báo — cái gì dẫn đến tái sinh, cái gì dẫn đến giải thoát — và đã đạt được giác ngộ, không còn bị dính mắc. Đó là bậc giải thoát thực sự.",
+  },
+  {
+    id: 206,
+    pham: "Phẩm Hạnh Phúc — Kệ đặc biệt 1",
+    ke_ngon: "Tâm từ bi rải khắp,\nKhắp mọi loài chúng sinh.\nNhư mẹ thương con một,\nBằng cả sinh mạng mình.",
+    y_nghia: "Tâm từ bi vô lượng — rải đồng đều đến tất cả chúng sinh không phân biệt — là phẩm chất cao quý nhất. Hình ảnh người mẹ yêu đứa con một bằng cả mạng sống là hình ảnh sâu sắc nhất về tình thương vô ngã.",
+  },
+  {
+    id: 207,
+    pham: "Phẩm Đạo — Kệ 277",
+    ke_ngon: "'Mọi hành uẩn vô thường' —\nKhi trí tuệ thấy rõ;\nOán khổ chán ngán này —\nĐây là con đường tịnh.",
+    y_nghia: "Nhận ra vô thường của mọi hiện tượng — không phải về mặt lý thuyết mà trong trải nghiệm trực tiếp — dẫn đến sự xả ly tự nhiên. Đây là bước đột phá của trí tuệ giải thoát.",
+  },
+  {
+    id: 208,
+    pham: "Phẩm Đạo — Kệ 278",
+    ke_ngon: "'Mọi hành uẩn là khổ' —\nKhi trí tuệ thấy rõ;\nOán khổ chán ngán này —\nĐây là con đường tịnh.",
+    y_nghia: "Thấy rõ bản chất khổ của sự vật — không phải để bi quan mà để hiểu rằng tìm kiếm hạnh phúc vĩnh cửu từ những thứ vô thường là nguyên nhân của khổ. Đây là trí tuệ giải phóng.",
+  },
+  {
+    id: 209,
+    pham: "Phẩm Đạo — Kệ 279",
+    ke_ngon: "'Mọi pháp đều vô ngã' —\nKhi trí tuệ thấy rõ;\nOán khổ chán ngán này —\nĐây là con đường tịnh.",
+    y_nghia: "Ba pháp ấn: vô thường, khổ và vô ngã. Thấy rõ 'vô ngã' — không có một cái 'tôi' cố định, độc lập, bất biến — là trí tuệ sâu sắc nhất, dẫn thẳng đến giải thoát.",
+  },
+  {
+    id: 210,
+    pham: "Phẩm Tự Ngã — Kệ đặc biệt",
+    ke_ngon: "Hãy tự mình thắp đuốc\nMà đi, hãy nỗ lực,\nHãy tự mình tinh tấn.\nLà bến đỗ an toàn.",
+    y_nghia: "Lời Đức Phật nhắn nhủ trước lúc nhập diệt: mỗi người là ngọn đèn của chính mình. Không ai có thể giác ngộ thay ta. Hãy tinh tấn, hãy tỉnh thức — chính ta là chỗ nương tựa vững chắc nhất.",
+  },
+  {
+    id: 211,
+    pham: "Phẩm Vui — Kệ 203",
+    ke_ngon: "Đói là bệnh đứng đầu,\nHành uẩn là khổ đứng đầu.\nNhư thật biết điều này —\nNiết-bàn là lạc đứng đầu.",
+    y_nghia: "Khi nhìn thẳng vào những sự thật căn bản nhất của cuộc đời — đói là khổ lớn của thân, hành uẩn là khổ lớn của tâm — ta hiểu sâu hơn tại sao Niết-bàn, sự chấm dứt của tất cả, là hạnh phúc tối thượng.",
+  },
+  {
+    id: 212,
+    pham: "Phẩm Không Phóng Dật — Kệ đặc biệt",
+    ke_ngon: "Trong mọi công hạnh thiện,\nKhông phóng dật dẫn đầu.\nNhư chân trời vạn thứ,\nMặt trời chiếu tất cả.",
+    y_nghia: "Không phóng dật — chánh niệm, tỉnh thức liên tục — là nền tảng của mọi thiện pháp, như mặt trời là nền tảng của ánh sáng. Không có chánh niệm, mọi thiện pháp khác đều khó bền vững.",
+  },
+  {
+    id: 213,
+    pham: "Phẩm Song Yếu — Kệ đặc biệt",
+    ke_ngon: "Lòng từ là trú xứ,\nBa nghiệp là cổng vào.\nNhẫn nhục là giáp trụ,\nChánh niệm là kim bài.",
+    y_nghia: "Bốn trụ cột của đời sống tu tập: từ bi là nơi trú ẩn, ba nghiệp (thân-khẩu-ý) là con đường vào, nhẫn nhục là lớp bảo vệ và chánh niệm là giấy thông hành. Khi bốn điều này đầy đủ, con đường rộng mở.",
+  },
+  {
+    id: 214,
+    pham: "Phẩm Phật Đà — Kệ đặc biệt",
+    ke_ngon: "Mọi điều ác tránh xa,\nMọi điều thiện vun trồng,\nTâm ý giữ trong sáng —\nĐây giáo lý mọi Phật.",
+    y_nghia: "Lời dạy đơn giản nhất và đầy đủ nhất của tất cả chư Phật: đừng làm ác, hãy làm thiện, và thanh lọc tâm. Ba điều này đủ để xây nên toàn bộ cuộc đời đáng sống và con đường đến giải thoát.",
   },
 ];
