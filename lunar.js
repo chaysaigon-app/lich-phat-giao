@@ -186,12 +186,12 @@ function getLeapMonthOffset(a11) {
  * @param {number} mm - Tháng dương lịch
  * @param {number} yy - Năm dương lịch
  * @returns {{
- *   ngayAm: number,
- *   thangAm: number,
- *   namAm: number,
- *   thangNhuan: boolean,
- *   soNgayTrongThang: number,
- *   canChi: string
+ * ngayAm: number,
+ * thangAm: number,
+ * namAm: number,
+ * thangNhuan: boolean,
+ * soNgayTrongThang: number,
+ * canChi: string
  * }}
  */
 function convertSolarToLunar(dd, mm, yy) {
@@ -239,14 +239,12 @@ function convertSolarToLunar(dd, mm, yy) {
   const daysInLunarMonth = nextMonthStart - monthStart;
 
   // Tính năm âm lịch
-  // Nếu tháng 11 âm lịch (a11) >= ngày đầu tháng hiện tại
-  // → đang ở cuối năm âm lịch yy (chưa qua Tết)
-  // Ngược lại → đã qua Tết, thuộc năm âm lịch yy + 1
-  let lunarYear;
-  if (a11 >= monthStart) {
-    lunarYear = yy;
-  } else {
-    lunarYear = yy + 1;
+  // Thông thường năm âm lịch khớp với năm dương lịch.
+  // Tuy nhiên nếu đang là tháng 11 hoặc 12 âm lịch mà lại rơi vào đầu năm dương lịch (tháng 1, 2)
+  // thì nghĩa là chưa qua Tết, thuộc về năm âm lịch trước đó.
+  let lunarYear = yy;
+  if (lunarMonth >= 11 && mm < 3) {
+    lunarYear = yy - 1;
   }
 
   // Tính Can Chi cho năm âm lịch
