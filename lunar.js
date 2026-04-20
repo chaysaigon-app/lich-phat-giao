@@ -239,26 +239,14 @@ function convertSolarToLunar(dd, mm, yy) {
   const daysInLunarMonth = nextMonthStart - monthStart;
 
   // Tính năm âm lịch
+  // Nếu tháng 11 âm lịch (a11) >= ngày đầu tháng hiện tại
+  // → đang ở cuối năm âm lịch yy (chưa qua Tết)
+  // Ngược lại → đã qua Tết, thuộc năm âm lịch yy + 1
   let lunarYear;
-  if (lunarMonth >= 11 && diff < 4) {
-    lunarYear = yy;
-  } else {
-    lunarYear = yy + 1;
-  }
-
-  // Tính năm âm lịch chính xác hơn
   if (a11 >= monthStart) {
     lunarYear = yy;
   } else {
     lunarYear = yy + 1;
-  }
-
-  // Xác định năm âm lịch dựa trên tháng
-  const monthFromA11 = diff + 11;
-  if (monthFromA11 > 12) {
-    lunarYear = yy + 1;
-  } else {
-    lunarYear = yy;
   }
 
   // Tính Can Chi cho năm âm lịch
